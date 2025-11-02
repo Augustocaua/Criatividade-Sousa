@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs>
+    <style>
+      .criatividade-text { 
+        font-family: 'Brush Script MT', cursive, serif; 
+        font-size: 120px; 
+        fill: #D4A574; 
+        font-weight: normal;
+      }
+      .sousa-text { 
+        font-family: 'Brush Script MT', cursive, serif; 
+        font-size: 180px; 
+        fill: #2DB5A5; 
+        font-weight: bold;
+      }
+      .scissors { 
+        fill: #E6A8C7; 
+        stroke: #E6A8C7; 
+        stroke-width: 2;
+      }
+      .decorative-line {
+        stroke: #2DB5A5;
+        stroke-width: 4;
+        fill: none;
+      }
+    </style>
+  </defs>
+  
+  <!-- Scissors icon on the left -->
+  <g transform="translate(50, 200)">
+    <!-- Scissors handles -->
+    <ellipse class="scissors" cx="15" cy="80" rx="12" ry="20" transform="rotate(-15 15 80)"/>
+    <ellipse class="scissors" cx="15" cy="120" rx="12" ry="20" transform="rotate(15 15 120)"/>
+    
+    <!-- Scissors blades -->
+    <path class="scissors" d="M25 85 L70 100 L75 95 L30 80 Z"/>
+    <path class="scissors" d="M25 115 L70 100 L75 105 L30 120 Z"/>
+    
+    <!-- Scissors pivot -->
+    <circle class="scissors" cx="70" cy="100" r="5"/>
+    
+    <!-- Decorative lines from scissors -->
+    <path class="decorative-line" d="M80 100 L120 100" stroke-dasharray="5,5"/>
+  </g>
+  
+  <!-- Main text: Criatividade -->
+  <text x="180" y="280" class="criatividade-text">Criatividade</text>
+  
+  <!-- Decorative flourish under Criatividade -->
+  <path class="decorative-line" d="M180 300 Q300 290 420 300 Q540 310 660 300 Q780 290 900 300" stroke-width="3"/>
+  
+  <!-- Main text: Sousa with decorative elements -->
+  <g>
+    <!-- Sousa text -->
+    <text x="180" y="450" class="sousa-text">Sousa</text>
+    
+    <!-- Decorative flourish after Sousa -->
+    <path class="decorative-line" d="M580 420 Q620 400 660 420 Q700 440 740 420 Q780 400 820 420" stroke-width="6"/>
+    
+    <!-- Small decorative elements -->
+    <circle fill="#E6A8C7" cx="850" cy="410" r="8"/>
+    <circle fill="#D4A574" cx="870" cy="430" r="6"/>
+    <circle fill="#2DB5A5" cx="890" cy="415" r="7"/>
+  </g>
+  
+  <!-- Additional decorative elements -->
+  <g transform="translate(150, 150)">
+    <path class="decorative-line" d="M0 0 Q20 -10 40 0 Q60 10 80 0" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(800, 480)">
+    <path class="decorative-line" d="M0 0 Q15 -8 30 0 Q45 8 60 0" stroke-width="2" opacity="0.6"/>
+  </g>
+</svg>

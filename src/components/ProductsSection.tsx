@@ -39,16 +39,16 @@ const ProductsSection = () => {
     <section id="produtos" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent mb-4 animate-fade-in">
             Nossos Produtos
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto animate-slide-up">
             Descubra nossa coleção especial de presentes personalizados. 
             Cada produto é criado com carinho e atenção aos detalhes.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {products.map((product, index) => (
             <div
               key={product.title}
@@ -65,7 +65,7 @@ const ProductsSection = () => {
             Não encontrou o que procura? Temos muito mais!
           </p>
           <a
-            href="#contato"
+            href="/produtos"
             className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-hover transition-colors"
           >
             Ver todos os produtos

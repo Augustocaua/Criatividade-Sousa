@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <style>
+      .icon-bg {
+        fill: #ffffff;
+        stroke: #2DB5A5;
+        stroke-width: 4;
+      }
+      .icon-c {
+        font-family: 'Brush Script MT', cursive, serif;
+        font-size: 80px;
+        fill: #D4A574;
+        font-weight: bold;
+      }
+      .icon-s {
+        font-family: 'Brush Script MT', cursive, serif;
+        font-size: 90px;
+        fill: #2DB5A5;
+        font-weight: bold;
+      }
+      .icon-scissors {
+        fill: #E6A8C7;
+        stroke: #E6A8C7;
+        stroke-width: 1.5;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle class="icon-bg" cx="100" cy="100" r="95"/>
+  
+  <!-- Small scissors in top left -->
+  <g transform="translate(25, 35) scale(0.6)">
+    <ellipse class="icon-scissors" cx="8" cy="15" rx="6" ry="10" transform="rotate(-15 8 15)"/>
+    <ellipse class="icon-scissors" cx="8" cy="25" rx="6" ry="10" transform="rotate(15 8 25)"/>
+    <path class="icon-scissors" d="M12 17 L25 20 L27 18 L14 15 Z"/>
+    <path class="icon-scissors" d="M12 23 L25 20 L27 22 L14 25 Z"/>
+    <circle class="icon-scissors" cx="25" cy="20" r="2"/>
+  </g>
+  
+  <!-- Letter C for Criatividade -->
+  <text x="60" y="90" class="icon-c" text-anchor="middle">C</text>
+  
+  <!-- Letter S for Sousa -->
+  <text x="100" y="150" class="icon-s" text-anchor="middle">S</text>
+  
+  <!-- Small decorative elements -->
+  <circle fill="#E6A8C7" cx="150" cy="60" r="4"/>
+  <circle fill="#D4A574" cx="165" cy="75" r="3"/>
+  <circle fill="#2DB5A5" cx="140" cy="170" r="3.5"/>
+</svg>

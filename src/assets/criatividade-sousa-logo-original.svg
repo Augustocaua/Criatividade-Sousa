@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <defs>
+    <style>
+      .original-criatividade {
+        font-family: 'Brush Script MT', 'Dancing Script', cursive;
+        font-size: 100px;
+        fill: #D4A574;
+        font-style: italic;
+        font-weight: normal;
+      }
+      .original-sousa {
+        font-family: 'Brush Script MT', 'Dancing Script', cursive;
+        font-size: 160px;
+        fill: #2DB5A5;
+        font-style: italic;
+        font-weight: bold;
+      }
+      .original-scissors {
+        fill: none;
+        stroke: #E6A8C7;
+        stroke-width: 8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .original-scissors-fill {
+        fill: #E6A8C7;
+      }
+      .decorative-swirl {
+        fill: none;
+        stroke: #2DB5A5;
+        stroke-width: 6;
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  
+  <!-- Scissors on the left -->
+  <g transform="translate(50, 250)">
+    <!-- Scissors handles (circles) -->
+    <circle class="original-scissors-fill" cx="20" cy="40" r="15"/>
+    <circle class="original-scissors-fill" cx="20" cy="80" r="15"/>
+    
+    <!-- Scissors blades -->
+    <path class="original-scissors" d="M35 45 L80 60 M35 75 L80 60"/>
+    
+    <!-- Connecting lines -->
+    <path class="original-scissors" d="M20 55 L20 65"/>
+  </g>
+  
+  <!-- Main text: Criatividade -->
+  <text x="200" y="280" class="original-criatividade">Criatividade</text>
+  
+  <!-- Main text: Sousa with decorative flourish -->
+  <g>
+    <text x="200" y="450" class="original-sousa">Sousa</text>
+    
+    <!-- Decorative flourish after Sousa -->
+    <path class="decorative-swirl" d="M580 420 Q620 400 660 420 Q700 440 740 420 Q780 400 820 420 Q860 440 900 420"/>
+  </g>
+  
+  <!-- Additional decorative swirls -->
+  <path class="decorative-swirl" d="M180 320 Q220 310 260 320 Q300 330 340 320" stroke-width="4" opacity="0.7"/>
+</svg>

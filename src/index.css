@@ -5,91 +5,95 @@
 /* Design system para Criatividade Sousa - cores teal e dourado */
 
 @layer base {
+  /* Smooth scroll para toda a página */
+  html {
+    scroll-behavior: smooth;
+  }
+
   :root {
-    --background: 0 0% 100%;
-    --foreground: 174 20% 15%;
+    /* Cores principais da marca - Nova Paleta: Off-White, Dourado Bege, Preto e Branco */
+    --off-white: 25 33% 98%; /* #FAF5F3 - Off-White suave como fundo principal */
+    --white: 0 0% 100%; /* #FFFFFF - Branco puro para fontes */
+    --golden-beige: 35 35% 63%; /* #D4AA6E - Dourado bege para destaques */
+    --golden-beige-dark: 35 30% 56%; /* #B8956A - Dourado bege escuro para hover */
+    --golden-beige-light: 35 45% 75%; /* #E8C89A - Dourado bege claro */
+    --black: 0 0% 0%; /* #000000 - Preto para contraste quando necessário */
+    --gray-light: 0 0% 95%; /* #F5F5F5 - Cinza claro para elementos suaves */
+    --gray-medium: 0 0% 80%; /* #CCCCCC - Cinza médio */
+    --gray-dark: 0 0% 40%; /* #666666 - Cinza escuro */
 
-    --card: 0 0% 100%;
-    --card-foreground: 174 20% 15%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 174 20% 15%;
-
-    /* Paleta principal - Teal vibrante */
-    --primary: 174 77% 47%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 174 77% 42%;
+    /* Cores do sistema de design */
+    --background: var(--off-white); /* Fundo off-white */
+    --foreground: var(--white); /* Texto branco */
+    --card: var(--off-white); /* Cards em off-white */
+    --card-foreground: var(--white); /* Texto dos cards em branco */
+    --popover: var(--off-white); /* Popovers em off-white */
+    --popover-foreground: var(--white); /* Texto dos popovers em branco */
+    --primary: var(--golden-beige); /* Primário em dourado bege */
+    --primary-foreground: var(--white); /* Texto primário em branco */
+    --secondary: var(--gray-light); /* Secundário em cinza claro */
+    --secondary-foreground: var(--white); /* Texto secundário em branco */
+    --muted: var(--gray-light); /* Elementos mutados em cinza claro */
+    --muted-foreground: var(--white); /* Texto mutado em branco */
+    --accent: var(--golden-beige); /* Accent em dourado bege */
+    --accent-foreground: var(--white); /* Texto accent em branco */
+    --destructive: 0 84.2% 60.2%; /* Vermelho para erros */
+    --destructive-foreground: var(--white); /* Texto de erro em branco */
+    --border: var(--golden-beige); /* Bordas em dourado bege */
+    --input: var(--off-white); /* Inputs em off-white */
+    --ring: var(--golden-beige); /* Foco em dourado bege */
+    --chart-1: var(--golden-beige);
+    --chart-2: var(--golden-beige-dark);
+    --chart-3: var(--white);
+    --chart-4: var(--golden-beige);
+    --chart-5: var(--golden-beige-light);
+    --radius: 0.75rem;
 
     /* Gradientes personalizados */
-    --gradient-primary: linear-gradient(135deg, hsl(174 77% 47%), hsl(174 60% 35%));
-    --gradient-secondary: linear-gradient(135deg, hsl(38 61% 73%), hsl(45 70% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(174 77% 47%) 0%, hsl(174 60% 35%) 50%, hsl(38 61% 73%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--golden-beige)) 0%, hsl(var(--golden-beige-dark)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--off-white)) 0%, hsl(var(--gray-light)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--off-white)) 0%, hsl(var(--gray-light)) 50%, hsl(var(--off-white)) 100%);
 
-    /* Cores secundárias */
-    --secondary: 174 30% 95%;
-    --secondary-foreground: 174 77% 47%;
-
-    --accent: 38 61% 73%;
-    --accent-foreground: 174 20% 15%;
-
-    --muted: 174 20% 96%;
-    --muted-foreground: 174 15% 45%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 174 20% 90%;
-    --input: 174 20% 95%;
-    --ring: 174 77% 47%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar */
+    --sidebar-background: var(--off-white);
+    --sidebar-foreground: var(--white);
+    --sidebar-primary: var(--golden-beige);
+    --sidebar-primary-foreground: var(--white);
+    --sidebar-accent: var(--gray-light);
+    --sidebar-accent-foreground: var(--white);
+    --sidebar-border: var(--golden-beige);
+    --sidebar-ring: var(--golden-beige);
   }
 
   .dark {
-    --background: 174 25% 8%;
-    --foreground: 174 20% 95%;
-
-    --card: 174 20% 12%;
-    --card-foreground: 174 20% 95%;
-
-    --popover: 174 20% 12%;
-    --popover-foreground: 174 20% 95%;
-
-    --primary: 174 77% 52%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 174 77% 47%;
-
-    --secondary: 174 15% 15%;
-    --secondary-foreground: 174 60% 80%;
-
-    --muted: 174 15% 15%;
-    --muted-foreground: 174 20% 65%;
-
-    --accent: 38 55% 65%;
-    --accent-foreground: 174 25% 8%;
+    /* Modo escuro com nova paleta */
+    --background: 0 0% 8%; /* Fundo escuro */
+    --foreground: 25 33% 97%; /* Off-White para texto */
+    --card: 0 0% 12%; /* Card escuro */
+    --card-foreground: 25 33% 97%; /* Off-White */
+    --popover: 0 0% 12%; /* Popover escuro */
+    --popover-foreground: 25 33% 97%; /* Off-White */
+    --primary: 40 50% 63%; /* Amarelo Dourado como destaque */
+    --primary-foreground: 0 0% 0%; /* Preto */
+    --primary-hover: 40 50% 55%; /* Amarelo Dourado mais escuro para hover */
+    
+    /* Gradientes para modo escuro */
+    --gradient-primary: linear-gradient(135deg, hsl(40, 50%, 63%) 0%, hsl(40, 50%, 55%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(0, 0%, 12%) 0%, hsl(0, 0%, 16%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 8%) 0%, hsl(0, 0%, 14%) 100%);
+    
+    --secondary: 210 25% 35%; /* Azul Médio mais escuro */
+    --secondary-foreground: 25 33% 97%; /* Off-White */
+    --accent: 40 50% 63%; /* Amarelo Dourado como destaque */
+    --accent-foreground: 0 0% 0%; /* Preto */
+    --muted: 0 0% 16%; /* Mutado escuro */
+    --muted-foreground: 25 33% 75%; /* Tom mais claro */
+    --border: 0 0% 20%; /* Borda escura */
+    --input: 0 0% 16%; /* Input escuro */
+    --ring: 40 50% 63%; /* Amarelo Dourado para foco */
 
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 174 15% 20%;
-    --input: 174 15% 20%;
-    --ring: 174 77% 52%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -103,11 +107,121 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   body {
     @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: hsl(var(--black)) !important;
+    background-color: hsl(var(--off-white));
+  }
+
+  /* Textos sobre fundo dourado - usar branco puro */
+  .text-on-golden,
+  .btn-primary,
+  .nav,
+  .footer {
+    color: hsl(var(--white)) !important;
+  }
+
+  /* Textos sobre fundo claro - usar preto */
+  .text-on-light,
+  .card,
+  h3, h4, h5, h6 {
+    color: hsl(var(--black)) !important;
+    font-weight: bold;
+  }
+
+  /* Títulos principais em dourado */
+  h1, h2 {
+    color: hsl(var(--accent)) !important;
+    font-weight: bold;
+  }
+
+  p, span, div, button, input, textarea, label {
+    color: hsl(var(--black)) !important;
+  }
+
+  /* Links com cor dourada e hover */
+  a {
+    color: hsl(var(--golden-beige)) !important;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: hsl(var(--golden-beige-dark)) !important;
+    text-decoration: underline;
+  }
+
+  /* Placeholders em cinza médio */
+  input::placeholder,
+  textarea::placeholder {
+    color: hsl(var(--gray-medium)) !important;
+    opacity: 1;
+  }
+
+  /* Estilos para botões com dourado bege */
+  .btn-primary {
+    background-color: hsl(var(--golden-beige));
+    color: white;
+    border: 2px solid hsl(var(--golden-beige));
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: hsl(var(--golden-beige-dark));
+    border-color: hsl(var(--golden-beige-dark));
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: hsl(var(--golden-beige));
+    border: 2px solid hsl(var(--golden-beige));
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: hsl(var(--golden-beige));
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  /* Cards com destaque dourado bege */
+  .card {
+    background-color: hsl(var(--off-white));
+    border: 2px solid hsl(var(--golden-beige));
+    color: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(212, 170, 110, 0.2);
+  }
+
+  /* Navegação com dourado bege */
+  .nav {
+    background-color: hsl(var(--golden-beige));
+    color: white;
+  }
+
+  /* Rodapé com dourado bege */
+  .footer {
+    background-color: hsl(var(--golden-beige-dark));
+    color: white;
+  }
+
+  /* Elementos de foco em dourado bege */
+  *:focus {
+    outline: 2px solid hsl(var(--golden-beige));
+    outline-offset: 2px;
   }
 
   /* Animações personalizadas */
@@ -131,31 +245,32 @@
     animation: float 3s ease-in-out infinite;
   }
 
+
+}
+
+@layer components {
+  /* Flip Card apenas usado na Home */
   .flip-card {
     perspective: 1000px;
   }
-
   .flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
     transform-style: preserve-3d;
+    transition: transform 0.6s ease;
   }
-
-  .flip-card:hover .flip-card-inner {
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner {
     transform: rotateY(180deg);
   }
-
-  .flip-card-front, .flip-card-back {
+  .flip-card-front,
+  .flip-card-back {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     backface-visibility: hidden;
-    border-radius: 1rem;
+    border-radius: var(--radius);
   }
-
   .flip-card-back {
     transform: rotateY(180deg);
   }

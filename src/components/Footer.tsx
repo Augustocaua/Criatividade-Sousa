@@ -1,18 +1,18 @@
 import { Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/criatividade-sousa-logo-novo.svg";
 
 const Footer = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Olá! Gostaria de mais informações 🎁");
-    window.open(`https://wa.me/5511999999999?text=${message}`, "_blank");
+    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
   };
 
   const quickLinks = [
     { name: "Início", href: "#inicio" },
-    { name: "Produtos", href: "#produtos" },
+    { name: "Produtos", href: "/produtos" },
     { name: "Benefícios", href: "#beneficios" },
-    { name: "Depoimentos", href: "#depoimentos" },
-    { name: "Contato", href: "#contato" },
+    { name: "Depoimentos", href: "/depoimentos" },
+    { name: "Contato", href: "/contatos" },
   ];
 
   return (
@@ -33,7 +33,7 @@ const Footer = () => {
             
             <div className="flex space-x-4">
               <a
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/5571987929082"
                 className="bg-green-500 hover:bg-green-600 p-3 rounded-full transition-colors duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -88,9 +88,8 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-background/60 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-background/80">
-                    Rua das Flores, 123<br />
-                    Centro - São Paulo, SP<br />
-                    CEP: 01234-567
+                   São gonçalo do retiro - Salvador, BA<br />
+                    CEP: 41190-000
                   </p>
                 </div>
               </div>
@@ -101,7 +100,7 @@ const Footer = () => {
                   onClick={handleWhatsApp}
                   className="text-background/80 hover:text-background transition-colors"
                 >
-                  (11) 99999-9999
+                  (71) 987929082
                 </button>
               </div>
               
@@ -121,7 +120,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-background/20 pt-8 text-center">
           <p className="text-background/60">
-            © 2024 Criatividade Sousa. Todos os direitos reservados. 
+            © 2025 Criatividade Sousa. Todos os direitos reservados. 
             Feito com ❤️ para criar momentos especiais.
           </p>
         </div>
