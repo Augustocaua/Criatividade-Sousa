@@ -15,17 +15,17 @@ const Contatos = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Header />
       
       <main>
         {/* Hero Section */}
-        <section className="bg-primary text-primary-foreground py-20">
+        <section className="bg-white text-foreground py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Entre em Contato
             </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
               Estamos aqui para transformar suas ideias em presentes únicos e inesquecíveis. 
               Fale conosco e vamos criar algo especial juntos!
             </p>
@@ -33,7 +33,7 @@ const Contatos = () => {
         </section>
 
         {/* Contact Information Section */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
               
