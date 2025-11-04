@@ -60,6 +60,15 @@ const Footer = () => {
               >
                 <Facebook className="w-6 h-6 text-white" />
               </a>
+              <a
+                href="https://shopee.com.br/criatividadesousa#product_list"
+                className="bg-[#EE4D2D] hover:bg-[#d54124] p-3 rounded-full transition-colors duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Shopee"
+              >
+                <img src="/shopee.svg" alt="Shopee" className="w-6 h-6" />
+              </a>
             </div>
           </div>
 

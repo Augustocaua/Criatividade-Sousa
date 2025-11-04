@@ -13,6 +13,9 @@ const Contatos = () => {
   const handleInstagram = () => {
     window.open("https://instagram.com/criatividadesousa", "_blank");
   };
+  const handleShopee = () => {
+    window.open("https://shopee.com.br/criatividadesousa#product_list", "_blank");
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -144,6 +147,26 @@ const Contatos = () => {
                   >
                     <Instagram className="h-4 w-4 mr-2" />
                     Seguir no Instagram
+                  </Button>
+                </div>
+                {/* Shopee */}
+                <div className="p-8 bg-[#FFF1EB] rounded-lg border border-[#EE4D2D]/40">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <img src="/shopee.svg" alt="Shopee" className="h-8 w-8" />
+                    <div>
+                      <h3 className="text-xl font-semibold text-[#B23A21]">Shopee</h3>
+                      <p className="text-[#EE4D2D]">Loja Criatividade Sousa</p>
+                    </div>
+                  </div>
+                  <p className="text-[#B23A21] mb-4">
+                    Confira nossos produtos e ofertas especiais na Shopee.
+                  </p>
+                  <Button 
+                    onClick={handleShopee}
+                    className="w-full bg-[#EE4D2D] hover:bg-[#d54124] text-white"
+                  >
+                    <img src="/shopee.svg" alt="Shopee" className="h-4 w-4 mr-2" />
+                    Acessar loja na Shopee
                   </Button>
                 </div>
 

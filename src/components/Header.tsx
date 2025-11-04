@@ -85,9 +85,9 @@ const Header = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
-            <X className="h-6 w-6 text-foreground" />
+            <X className={`h-6 w-6 ${isHomePage ? "text-[#FFD700]" : "text-foreground"}`} />
           ) : (
-            <Menu className="h-6 w-6 text-foreground" />
+            <Menu className={`h-6 w-6 ${isHomePage ? "text-[#FFD700]" : "text-foreground"}`} />
           )}
         </button>
       </div>
