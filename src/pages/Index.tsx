@@ -6,7 +6,6 @@ import ShopeeSection from "@/components/ShopeeSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Index = () => {
   return (
@@ -21,7 +20,6 @@ const Index = () => {
       <section id="beneficios">
         <BenefitsSection />
         <ShopeeSection />
-        <TestimonialsSection />
       </section>
       <section id="contato">
         <CTASection />

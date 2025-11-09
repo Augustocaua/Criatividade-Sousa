@@ -152,7 +152,7 @@ const Contatos = () => {
                 {/* Shopee */}
                 <div className="p-8 bg-[#FFF1EB] rounded-lg border border-[#EE4D2D]/40">
                   <div className="flex items-center space-x-4 mb-4">
-                    <img src="/shopee.svg" alt="Shopee" className="h-8 w-8" />
+                    <img src="/icones-shopee.png" alt="Shopee" className="h-8 w-8 object-contain" />
                     <div>
                       <h3 className="text-xl font-semibold text-[#B23A21]">Shopee</h3>
                       <p className="text-[#EE4D2D]">Loja Criatividade Sousa</p>
@@ -165,7 +165,7 @@ const Contatos = () => {
                     onClick={handleShopee}
                     className="w-full bg-[#EE4D2D] hover:bg-[#d54124] text-white"
                   >
-                    <img src="/shopee.svg" alt="Shopee" className="h-4 w-4 mr-2" />
+                    <img src="/icones-shopee.png" alt="Shopee" className="h-4 w-4 mr-2 object-contain" />
                     Acessar loja na Shopee
                   </Button>
                 </div>

@@ -67,8 +67,8 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Shopee"
               >
-                <img src="/shopee.svg" alt="Shopee" className="w-6 h-6" />
-              </a>
+                <img src="/icones-shopee.png" alt="Shopee" className="w-6 h-6 object-contain" />
+               </a>
             </div>
           </div>
 

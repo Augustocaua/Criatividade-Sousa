@@ -6,7 +6,8 @@ import corporateKit from "@/assets/corporate-kit.jpg";
 const ProductsSection = () => {
   const products = [
     {
-      image: mugProduct,
+-      image: mugProduct,
++      image: "/foto card caneca.jpeg",
       title: "Canecas Personalizadas",
       price: "A partir de R$ 25",
       description: "Canecas únicas com seu design personalizado para momentos especiais",

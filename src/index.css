@@ -129,7 +129,6 @@
 
   /* Textos sobre fundo claro - usar preto */
   .text-on-light,
-  .card,
   h3, h4, h5, h6 {
     color: hsl(var(--black)) !important;
     font-weight: bold;
@@ -200,7 +199,7 @@
   .card {
     background-color: hsl(var(--off-white));
     border: 2px solid hsl(var(--golden-beige));
-    color: white;
+    color: hsl(var(--black));
     border-radius: 0.75rem;
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(212, 170, 110, 0.2);
