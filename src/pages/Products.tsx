@@ -32,9 +32,9 @@ const Products = () => {
       description: "Caneca de cerâmica com impressão de alta qualidade. Personalize com foto, nome ou frase especial.",
       category: "canecas",
       galleryImages: [
-        "/canecaturas/caneca numero 1.jpeg",
-        "/canecaturas/numero 2.jpeg",
-        "/canecaturas/numero 3.jpeg",
+        "/canecaturas/caneca-numero-1.jpeg",
+        "/canecaturas/numero-2.jpeg",
+        "/canecaturas/numero-3.jpeg",
       ]
     },
     {
@@ -63,16 +63,16 @@ const Products = () => {
     },
     {
       id: 5,
-      image: "/Adesivos personalizados em Vinil/1.jpeg",
+      image: "/adesivos-personalizados-em-vinil/1.jpeg",
       title: "Adesivos personalizados em Vinil",
       price: "R$ 65,00",
       description: "Adesivos personalizados em vinil de alta qualidade, perfeitos para decorar cadernos, laptops, agendas, embalagens ou qualquer superfície lisa. Duráveis, resistentes à água e com cores vibrantes que dão um toque único e criativo aos seus objetos. Personalize do seu jeito e transforme cada detalhe em algo especial!.",
       category: "especiais",
       categoryLabel: "Adesivos personalizados em Vinil",
       galleryImages: [
-        "/Adesivos personalizados em Vinil/1.jpeg",
-        "/Adesivos personalizados em Vinil/2.jpeg",
-        "/Adesivos personalizados em Vinil/3.jpeg"
+        "/adesivos-personalizados-em-vinil/1.jpeg",
+        "/adesivos-personalizados-em-vinil/2.jpeg",
+        "/adesivos-personalizados-em-vinil/3.jpeg"
       ]
     },
     {

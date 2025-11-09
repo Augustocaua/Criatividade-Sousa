@@ -6,8 +6,7 @@ import corporateKit from "@/assets/corporate-kit.jpg";
 const ProductsSection = () => {
   const products = [
     {
--      image: mugProduct,
-+      image: "/foto card caneca.jpeg",
+      image: "/imagem home caneca.jpeg",
       title: "Canecas Personalizadas",
       price: "A partir de R$ 25",
       description: "Canecas únicas com seu design personalizado para momentos especiais",
@@ -21,15 +20,15 @@ const ProductsSection = () => {
       category: "Romance"
     },
     {
-      image: corporateKit,
-      title: "Kits Corporativos",
+      image: "/imagem de combo.jpeg",
+      title: "Combos Personalizados",
       price: "A partir de R$ 120",
-      description: "Presentes profissionais para eventos e comemorações empresariais",
+      description: "Combos personalizados para eventos e comemorações empresariais",
       category: "Corporativo"
     },
     {
-      image: mugProduct,
-      title: "Presentes Criativos",
+      image: "/tete-convertido-de-jpeg.jpeg",
+      title: "Topos de Bolos",
       price: "A partir de R$ 45",
       description: "Ideias originais e criativas para surpreender pessoas especiais",
       category: "Criativo"

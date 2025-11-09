@@ -1,12 +1,12 @@
 const TestimonialsSection = () => {
   const galleryImages = [
-    "/depoimentos/Imagem do WhatsApp de 2025-10-20 à(s) 22.52.53_07b44eca-convertido-de-jpg.jpeg",
-    "/depoimentos/Imagem do WhatsApp de 2025-10-20 à(s) 22.52.53_ce4d08c4-convertido-de-jpg.jpeg",
-    "/depoimentos/Imagem do WhatsApp de 2025-10-20 à(s) 22.52.54_0e2e0905-convertido-de-jpg.jpeg",
-    "/depoimentos/Imagem do WhatsApp de 2025-10-20 à(s) 22.52.54_da3a50ad-convertido-de-jpg.jpeg",
-    "/depoimentos/Imagem do WhatsApp de 2025-10-20 à(s) 22.52.55_517d014d-convertido-de-jpg.jpeg",
-    "/depoimentos/Imagem do WhatsApp de 2025-10-20 à(s) 22.52.55_5abbd74f-convertido-de-jpg.jpeg",
-    "/depoimentos/Imagem do WhatsApp de 2025-10-20 à(s) 22.52.55_965596c3-convertido-de-jpg.jpeg",
+    "/depoimentos/depoimento-1.jpeg",
+    "/depoimentos/depoimento-2.jpeg",
+    "/depoimentos/depoimento-3.jpeg",
+    "/depoimentos/depoimento-4.jpeg",
+    "/depoimentos/depoimento-5.jpeg",
+    "/depoimentos/depoimento-6.jpeg",
+    "/depoimentos/depoimento-7.jpeg",
   ];
 
   const handleWhatsApp = () => {
