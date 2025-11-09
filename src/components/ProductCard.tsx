@@ -55,7 +55,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                     key={idx}
                     src={src}
                     alt={`${title} ${idx + 1}`}
-                    className="min-w-full h-full object-cover snap-start shrink-0"
+                    className="min-w-full h-full object-contain snap-start shrink-0"
                     loading="lazy"
                     onError={(e) => {
                       e.currentTarget.src = "/placeholder.svg";
@@ -68,7 +68,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
             <img
               src={image}
               alt={title}
-              className="w-full h-48 sm:h-56 object-cover"
+              className="w-full h-48 sm:h-56 object-contain"
               loading="lazy"
               onError={(e) => {
                 e.currentTarget.src = "/placeholder.svg";
@@ -137,7 +137,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                         key={idx}
                         src={src}
                         alt={`${title} ${idx + 1}`}
-                        className="min-w-full h-full object-cover snap-start shrink-0"
+                        className="min-w-full h-full object-contain snap-start shrink-0"
                         loading="lazy"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg";
@@ -150,7 +150,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                 <img
                   src={image}
                   alt={title}
-                  className="w-full h-3/4 object-cover"
+                  className="w-full h-3/4 object-contain"
                   loading="lazy"
                   onError={(e) => {
                     e.currentTarget.src = "/placeholder.svg";
