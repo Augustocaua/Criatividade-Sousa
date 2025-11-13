@@ -25,6 +25,7 @@ const Header = () => {
     { name: "Sobre nós", href: "/sobre-nos", isRoute: true },
     { name: "Depoimentos", href: "/depoimentos", isRoute: true },
     { name: "Contato", href: "/contatos", isRoute: true },
+    { name: "Privacidade", href: "/politica-de-privacidade", isRoute: true },
   ];
 
   const handleWhatsApp = () => {
