@@ -18,17 +18,17 @@ const Contatos = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background animated-bg">
       <Header />
       
       <main>
         {/* Hero Section */}
         <section className="bg-white text-foreground py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <div className="container mx-auto px-4 text-center animate-fade-in motion-reduce:animate-none">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up motion-reduce:animate-none">
               Entre em Contato
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto animate-slide-up motion-reduce:animate-none" style={{ animationDelay: "0.15s" }}>
               Estamos aqui para transformar suas ideias em presentes únicos e inesquecíveis. 
               Fale conosco e vamos criar algo especial juntos!
             </p>
@@ -37,13 +37,13 @@ const Contatos = () => {
 
         {/* Contact Information Section */}
         <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 animate-fade-in motion-reduce:animate-none">
             <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
               
               {/* Contact Info */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-3xl font-bold text-accent mb-8">
+                  <h2 className="text-3xl font-bold text-accent mb-8 animate-slide-up motion-reduce:animate-none">
                     Informações de Contato
                   </h2>
                 </div>
@@ -172,10 +172,10 @@ const Contatos = () => {
 
                 {/* Contact CTA */}
                 <div className="p-8 bg-primary/5 rounded-lg border border-primary/20">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">
+                  <h3 className="text-xl font-semibold text-foreground mb-4 animate-slide-up motion-reduce:animate-none">
                     Pronto para criar algo especial?
                   </h3>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-muted-foreground mb-6 animate-slide-up motion-reduce:animate-none" style={{ animationDelay: "0.15s" }}>
                     Entre em contato conosco e vamos transformar sua ideia em um presente inesquecível!
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

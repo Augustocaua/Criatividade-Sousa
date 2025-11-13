@@ -20,21 +20,21 @@ const Depoimentos = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animated-bg">
       <Header />
       <WhatsAppFloat />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-accent mb-6">
+        <div className="container mx-auto px-4 text-center animate-fade-in motion-reduce:animate-none">
+          <h1 className="text-4xl lg:text-6xl font-bold text-accent mb-6 animate-slide-up motion-reduce:animate-none">
             O que nossos{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               clientes
             </span>{" "}
             dizem
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-slide-up motion-reduce:animate-none" style={{ animationDelay: "0.15s" }}>
             Mais de 500 clientes satisfeitos compartilham suas experiências com nossos presentes personalizados
           </p>
           
@@ -82,11 +82,11 @@ const Depoimentos = () => {
 
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-br from-secondary to-muted">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-accent mb-6">
+        <div className="container mx-auto px-4 text-center animate-fade-in motion-reduce:animate-none">
+          <h2 className="text-3xl lg:text-4xl font-bold text-accent mb-6 animate-slide-up motion-reduce:animate-none">
             Quer ser o próximo cliente satisfeito?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-slide-up motion-reduce:animate-none" style={{ animationDelay: "0.15s" }}>
             Junte-se a centenas de pessoas que já transformaram momentos especiais em lembranças inesquecíveis
           </p>
           

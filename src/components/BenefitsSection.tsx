@@ -25,7 +25,7 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section id="beneficios" className="py-16 sm:py-20 bg-background">
+    <section id="sobre-nos" className="py-16 sm:py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent mb-4 animate-fade-in">
@@ -69,15 +69,6 @@ const BenefitsSection = () => {
         </div>
 
         {/* Decorative elements */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-3 px-5 py-3 sm:gap-4 sm:px-8 sm:py-4 bg-secondary rounded-full">
-            <span className="text-xl sm:text-2xl">🎨</span>
-            <span className="font-medium text-foreground">
-              Mais de 500 clientes satisfeitos
-            </span>
-            <span className="text-xl sm:text-2xl">💝</span>
-          </div>
-        </div>
       </div>
     </section>
   );

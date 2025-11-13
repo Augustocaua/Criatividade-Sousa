@@ -22,7 +22,7 @@ const Header = () => {
   const menuItems = [
     { name: "Início", href: "#inicio", isRoute: false },
     { name: "Produtos", href: "/produtos", isRoute: true },
-    { name: "Benefícios", href: "#beneficios", isRoute: false },
+    { name: "Sobre nós", href: "/sobre-nos", isRoute: true },
     { name: "Depoimentos", href: "/depoimentos", isRoute: true },
     { name: "Contato", href: "/contatos", isRoute: true },
   ];
@@ -85,9 +85,9 @@ const Header = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
-            <X className={`h-6 w-6 ${isHomePage ? "text-[#FFD700]" : "text-foreground"}`} />
+            <X className="h-6 w-6 text-accent" />
           ) : (
-            <Menu className={`h-6 w-6 ${isHomePage ? "text-[#FFD700]" : "text-foreground"}`} />
+            <Menu className="h-6 w-6 text-accent" />
           )}
         </button>
       </div>

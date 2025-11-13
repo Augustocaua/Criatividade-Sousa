@@ -244,6 +244,24 @@
     animation: float 3s ease-in-out infinite;
   }
 
+  /* Scroll Reveal helpers */
+  .sr-paused {
+    animation-play-state: paused;
+    opacity: 0;
+  }
+
+  /* Slide-out utilities */
+  .animate-slide-out-left {
+    animation: slide-out-left 0.6s ease-in;
+  }
+
+  .animate-slide-out-right {
+    animation: slide-out-right 0.6s ease-in;
+  }
+
+  .animate-slide-out-up {
+    animation: slide-out-up 0.6s ease-in;
+  }
 
 }
 
@@ -319,11 +337,66 @@
   }
 }
 
+/* Slide-out keyframes */
+@keyframes slide-out-left {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+}
+
+@keyframes slide-out-right {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+}
+
+@keyframes slide-out-up {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+/* Animated brand background: white + golden beige */
+.animated-bg {
+  /* Layered subtle gradients using brand variables */
+  background-image:
+    radial-gradient(1200px 800px at 15% 25%, hsl(var(--golden-beige) / 0.08), transparent 60%),
+    radial-gradient(1000px 600px at 85% 75%, hsl(var(--golden-beige-light) / 0.10), transparent 55%),
+    linear-gradient(135deg, hsl(var(--white)), hsl(var(--off-white)));
+  background-size: 200% 200%, 200% 200%, 200% 200%;
+  background-position: 0% 0%, 100% 0%, 0% 0%;
+  animation: bg-pan 18s ease-in-out infinite alternate;
+}
+
+@keyframes bg-pan {
+  0% {
+    background-position: 0% 0%, 100% 0%, 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%, 0% 100%, 100% 100%;
   }
 }

@@ -111,23 +111,24 @@ const Products = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animated-bg">
       <Header />
       
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent mb-6">
+        <div className="container mx-auto px-4 text-center animate-fade-in motion-reduce:animate-none">
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent mb-6 animate-slide-up motion-reduce:animate-none">
             Nossos Produtos
           </h1>
-          <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto mb-8 animate-slide-up motion-reduce:animate-none" style={{ animationDelay: "0.15s" }}>
             Descubra nossa coleção completa de presentes personalizados. 
             Cada produto é criado com carinho e atenção aos detalhes.
           </p>
           <Button
             onClick={handleWhatsApp}
             size="lg"
-            className="bg-white text-accent hover:bg-white/90 font-bold px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+            className="bg-white text-accent hover:bg-white/90 font-bold px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 animate-slide-up motion-reduce:animate-none"
+            style={{ animationDelay: "0.3s" }}
           >
             💬 Fale Conosco no WhatsApp
           </Button>
@@ -136,7 +137,7 @@ const Products = () => {
 
       {/* Categories Filter */}
       <section className="py-8 bg-secondary/30">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 animate-fade-in motion-reduce:animate-none">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button
@@ -157,7 +158,7 @@ const Products = () => {
 
       {/* Products Grid */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 animate-fade-in motion-reduce:animate-none">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {filteredProducts.map((product) => (
               <ProductCard
@@ -191,17 +192,18 @@ const Products = () => {
 
       {/* Call to Action */}
       <section className="py-16 bg-background border-t border-border">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-accent mb-6">
+        <div className="container mx-auto px-4 text-center animate-fade-in motion-reduce:animate-none">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-accent mb-6 animate-slide-up motion-reduce:animate-none">
             Não encontrou o que procura?
           </h2>
-          <p className="text-base sm:text-lg text-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-foreground mb-8 max-w-2xl mx-auto animate-slide-up motion-reduce:animate-none" style={{ animationDelay: "0.15s" }}>
             Criamos produtos personalizados sob medida! Entre em contato e conte sua ideia.
           </p>
           <Button
             onClick={handleWhatsApp}
             size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary-hover font-bold px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+            className="bg-primary text-primary-foreground hover:bg-primary-hover font-bold px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 animate-slide-up motion-reduce:animate-none"
+            style={{ animationDelay: "0.3s" }}
           >
             🎨 Solicitar Produto Personalizado
           </Button>

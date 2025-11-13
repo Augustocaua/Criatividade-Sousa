@@ -47,7 +47,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
               ref={scrollRef}
               tabIndex={0}
               onKeyDown={handleKeyDown}
-              className="w-full h-48 sm:h-56 overflow-x-auto scroll-smooth"
+              className="w-full aspect-square overflow-x-auto scroll-smooth"
             >
               <div className="flex h-full gap-3 snap-x snap-mandatory">
                 {galleryImages.map((src, idx) => (
@@ -55,7 +55,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                     key={idx}
                     src={src}
                     alt={`${title} ${idx + 1}`}
-                    className="min-w-full h-full object-contain snap-start shrink-0"
+                    className="min-w-full h-full object-cover snap-start shrink-0"
                     loading="lazy"
                     onError={(e) => {
                       e.currentTarget.src = "/placeholder.svg";
@@ -68,7 +68,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
             <img
               src={image}
               alt={title}
-              className="w-full h-48 sm:h-56 object-contain"
+              className="w-full aspect-square object-cover"
               loading="lazy"
               onError={(e) => {
                 e.currentTarget.src = "/placeholder.svg";
@@ -123,7 +123,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
   }
 
   return (
-    <div className="flip-card h-64 sm:h-80 w-full mx-auto">
+    <div className="flip-card aspect-square w-full mx-auto">
       <div className="flip-card-inner">
         {/* Front */}
         <div className="flip-card-front bg-card border border-border shadow-lg overflow-hidden">
@@ -137,7 +137,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                         key={idx}
                         src={src}
                         alt={`${title} ${idx + 1}`}
-                        className="min-w-full h-full object-contain snap-start shrink-0"
+                        className="min-w-full h-full object-cover snap-start shrink-0"
                         loading="lazy"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg";
@@ -150,7 +150,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                 <img
                   src={image}
                   alt={title}
-                  className="w-full h-3/4 object-contain"
+                  className="w-full h-3/4 object-cover"
                   loading="lazy"
                   onError={(e) => {
                     e.currentTarget.src = "/placeholder.svg";
