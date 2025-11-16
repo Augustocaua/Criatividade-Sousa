@@ -10,13 +10,14 @@ const Depoimentos = () => {
   };
 
   const galleryImages = [
-    "/depoimentos/depoimento-1.jpeg",
-    "/depoimentos/depoimento-2.jpeg",
-    "/depoimentos/depoimento-3.jpeg",
-    "/depoimentos/depoimento-4.jpeg",
-    "/depoimentos/depoimento-5.jpeg",
-    "/depoimentos/depoimento-6.jpeg",
-    "/depoimentos/depoimento-7.jpeg",
+    "/depoimentos/Imagem do WhatsApp de 2025-11-03 à(s) 22.52.19_28dad750-convertido-de-jpg.jpeg",
+    "/depoimentos/Imagem do WhatsApp de 2025-11-03 à(s) 22.52.19_e0cfb71c-convertido-de-jpg.jpeg",
+    "/depoimentos/Imagem do WhatsApp de 2025-11-03 à(s) 22.52.19_e24ada3b-convertido-de-jpg.jpeg",
+    "/depoimentos/Imagem do WhatsApp de 2025-11-03 à(s) 22.52.19_f5304b10-convertido-de-jpg.jpeg",
+    "/depoimentos/Imagem do WhatsApp de 2025-11-03 à(s) 22.52.20_8e035176-convertido-de-jpg.jpeg",
+    "/depoimentos/Imagem do WhatsApp de 2025-11-03 à(s) 22.52.20_914a0751-convertido-de-jpg.jpeg",
+    "/depoimentos/Imagem do WhatsApp de 2025-11-03 à(s) 22.52.20_e00a3e1e-convertido-de-jpg.jpeg",
+    "/depoimentos/Imagem do WhatsApp de 2025-11-03 à(s) 22.52.25_32c1fe1b-convertido-de-jpg.jpeg",
   ];
 
   return (
@@ -35,13 +36,12 @@ const Depoimentos = () => {
             dizem
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-slide-up motion-reduce:animate-none" style={{ animationDelay: "0.15s" }}>
-            Mais de 500 clientes satisfeitos compartilham suas experiências com nossos presentes personalizados
+            Clientes satisfeitos compartilham suas experiências com nossos presentes personalizados
           </p>
           
           {/* Estatísticas */}
           <div className="flex flex-wrap justify-center gap-8 mb-12">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">500+</div>
               <div className="text-muted-foreground">Clientes Felizes</div>
             </div>
             <div className="text-center">
@@ -60,22 +60,25 @@ const Depoimentos = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {galleryImages.map((src, index) => (
-              <div
-                key={src}
-                className="group overflow-hidden rounded-2xl bg-card border border-border shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="aspect-[3/4] sm:aspect-[4/3]">
-                  <img
-                    src={src}
-                    alt={`Depoimento ${index + 1}`}
-                    loading="lazy"
-                    className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
-                  />
+            {galleryImages.map((rawSrc, index) => {
+              const src = encodeURI(rawSrc);
+              return (
+                <div
+                  key={rawSrc}
+                  className="group overflow-hidden rounded-2xl bg-card border border-border shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="aspect-[3/4] sm:aspect-[4/3]">
+                    <img
+                      src={src}
+                      alt={`Depoimento ${index + 1}`}
+                      loading="lazy"
+                      className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
