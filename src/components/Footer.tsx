@@ -1,4 +1,4 @@
-import { Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
+import { Instagram, Facebook, MapPin, Phone, Mail, ShoppingBag } from "lucide-react";
 import logo from "@/assets/criatividade-sousa-logo-novo.svg";
 
 const Footer = () => {
@@ -67,8 +67,8 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Shopee"
               >
-                <img src="/icones-shopee.png" alt="Shopee" className="w-6 h-6 object-contain" />
-               </a>
+                <ShoppingBag className="w-6 h-6 text-white" />
+              </a>
             </div>
           </div>
 

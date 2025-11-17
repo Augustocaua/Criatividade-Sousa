@@ -8,13 +8,13 @@ const ProductsSection = () => {
     {
       image: "/imagem home caneca.jpeg",
       title: "Canecas Personalizadas",
-      price: "A partir de R$ 25",
+      price: "A partir de R$ 36,99",
       description: "Canecas únicas com seu design personalizado para momentos especiais",
       category: "Personalizado"
     },
     {
       image: basketProduct,
-      title: "Cestas Românticas",
+      title: "Cestas personalizadas",
       price: "A partir de R$ 89",
       description: "Cestas especiais com mimos e presentes para conquistar corações",
       category: "Romance"
