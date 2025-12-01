@@ -45,8 +45,9 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <LogoFrame width={120} height={60} className="h-12" />
-          <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Criatividade Sousa
+
+          <span className={"!text-foreground text-2xl font-bold"}>
+          Criatividade Sousa
           </span>
         </div>
 

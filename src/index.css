@@ -112,7 +112,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: hsl(var(--black)) !important;
@@ -399,4 +399,16 @@
   100% {
     background-position: 100% 100%, 0% 100%, 100% 100%;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif !important;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+p, a, button, input, textarea, label, span, div {
+  font-family: 'Cormorant Garamond', serif !important;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
 }
