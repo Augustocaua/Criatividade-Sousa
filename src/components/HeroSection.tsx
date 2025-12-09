@@ -20,7 +20,8 @@ const HeroSection = () => {
         {/* Left Content */}
         <div className="text-center lg:text-left space-y-8">
           <h1 data-sr="up" data-sr-stagger="chars" data-sr-duration="0.9" data-sr-ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)" data-sr-step="0.06" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent">
-            Presentes que{" "}
+            Presentes que
+            <br className="sm:hidden" />
             <span className="inline-flex whitespace-nowrap items-baseline">
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Marcam
