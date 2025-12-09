@@ -20,7 +20,8 @@ const Products = () => {
     { id: "canecas", name: "Canecas personalizadas" },
     { id: "cestas", name: "Combos de Canecas" },
     { id: "corporativo", name: "Kits Corporativos" },
-    { id: "especiais", name: "Adesivos personalizados em Vinil" }
+    { id: "especiais", name: "Adesivos personalizados em Vinil" },
+    { id: "fotos", name: "Fotos" }
   ];
 
   const products = [
@@ -62,11 +63,26 @@ const Products = () => {
       category: "canecas"
     },
     {
+      id: 12,
+      image: encodeURI("/Caneca de colorir pinte e lave/1.jpeg"),
+      title: "Caneca de Colorir Meninas",
+      price: "R$ 38,99",
+      description: "Caneca de colorir pinte e lave / Presente Crianças / com caixa e laço / Caneca porcelana / Presente menina criativo infantil 🎨☕",
+      category: "canecas",
+      galleryImages: [
+        encodeURI("/canecas de colcorir meninas/1.jpeg"),
+        encodeURI("/canecas de colcorir meninas/2.jpeg"),
+        encodeURI("/canecas de colcorir meninas/3.jpeg"),
+        encodeURI("/canecas de colcorir meninas/4.jpeg"),
+        encodeURI("/canecas de colcorir meninas/5.jpeg"),
+      ]
+    },
+    {
       id: 5,
       image: "/adesivos-personalizados-em-vinil/1.jpeg",
       title: "Adesivos personalizados em Vinil",
       price: "R$ 65,00",
-      description: "Adesivos personalizados em vinil de alta qualidade, perfeitos para decorar cadernos, laptops, agendas, embalagens ou qualquer superfície lisa. Duráveis, resistentes à água e com cores vibrantes que dão um toque único e criativo aos seus objetos. Personalize do seu jeito e transforme cada detalhe em algo especial!.",
+      description: "Adesivos personalizados em vinil de alta qualidade, perfeitos para decorar cadernos, laptops, agendas, embalagens ou qualquer superfície lisa. Duráveis, resistentes à água e com cores vibrantes que dão um toque único e criativo aos seus objetos. Personalize do seu jeito e cri...",
       category: "especiais",
       categoryLabel: "Adesivos personalizados em Vinil",
       galleryImages: [
@@ -98,7 +114,47 @@ const Products = () => {
       price: "R$ 150,00",
       description: "Cesta premium com champagne, chocolates gourmet e itens de luxo para aniversários.",
       category: "especiais"
-    }
+    },
+    {
+      id: 9,
+      image: encodeURI("/canecas da vovo/br-11134207-81z1k-mfv8qz4dubrbbf-convertido-de-webp.jpeg"),
+      title: "Caneca personalizada para avó",
+      price: "R$ 39,90",
+      description: "Caneca personalizada para avó / vai com caixa e laço para presentear / Caneca dia dos avós / Presente para avó / Caneca para avó",
+      category: "canecas",
+      galleryImages: [
+        encodeURI("/canecas da vovo/br-11134207-81z1k-mfv8qz4dubrbbf-convertido-de-webp.jpeg"),
+        encodeURI("/canecas da vovo/br-11134207-81z1k-mfv8qz4dzy1354@resize_w900_nl-convertido-de-webp.jpeg"),
+        encodeURI("/canecas da vovo/br-11134207-81z1k-mfv8qz4e2r5z3c@resize_w900_nl-convertido-de-webp.jpeg"),
+      ]
+    },
+    {
+      id: 10,
+      image: encodeURI("/Quadro decorativo natal/1.jpeg"),
+      title: "Quadro decorativo de Natal",
+      price: "R$ 28,90",
+      description: "Quadro decorativo natal com foto–Base MDF 15x15cm com suporte- porta retrato personalizado–lembrança criativa–presente",
+      category: "fotos",
+      galleryImages: [
+        encodeURI("/Quadro decorativo natal/1.jpeg"),
+        encodeURI("/Quadro decorativo natal/2.jpeg"),
+        encodeURI("/Quadro decorativo natal/3.jpeg"),
+        encodeURI("/Quadro decorativo natal/4.jpeg"),
+      ]
+    },
+    {
+      id: 11,
+      image: encodeURI("/bola de natal/ima1.jpeg"),
+      title: "Bola de Natal personalizada",
+      price: "R$ 31,90",
+      description: "Bola de natal personalizada com foto/ Bolinha de natal personalizada com foto/ enfeite de natal/ Bola natalina com foto.",
+      category: "fotos",
+      galleryImages: [
+        encodeURI("/bola de natal/ima1.jpeg"),
+        encodeURI("/bola de natal/ima2.jpeg"),
+        encodeURI("/bola de natal/ima3.jpeg"),
+      ]
+    },
   ];
 
   const filteredProducts = selectedCategory === "todos" 
@@ -116,75 +172,80 @@ const Products = () => {
       
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-white">
-        <div className="container mx-auto px-4 text-center animate-fade-in motion-reduce:animate-none">
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent mb-6 animate-slide-up motion-reduce:animate-none">
-            Nossos Produtos
-          </h1>
-          <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto mb-8 animate-slide-up motion-reduce:animate-none" style={{ animationDelay: "0.15s" }}>
+        <div className="container mx-auto px-4 text-center">
+          <h1 data-sr="up" data-sr-duration="0.8" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent mb-6">
+             Nossos Produtos
+           </h1>
+          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-base sm:text-lg text-foreground max-w-3xl mx-auto mb-8">
             Descubra nossa coleção completa de presentes personalizados. 
             Cada produto é criado com carinho e atenção aos detalhes.
           </p>
-          <Button
-            onClick={handleWhatsApp}
-            size="lg"
-            className="bg-white text-accent hover:bg-white/90 font-bold px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 animate-slide-up motion-reduce:animate-none"
-            style={{ animationDelay: "0.3s" }}
-          >
-            💬 Fale Conosco no WhatsApp
-          </Button>
+          <div data-sr="up" data-sr-duration="0.7">
+            <Button
+              onClick={handleWhatsApp}
+              size="lg"
+              className="bg-white text-accent hover:bg-white/90 font-bold px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+            >
+              💬 Fale Conosco no WhatsApp
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* Categories Filter */}
       <section className="py-8 bg-secondary/30">
-        <div className="container mx-auto px-4 animate-fade-in motion-reduce:animate-none">
+        <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base rounded-full font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? "bg-primary text-primary-foreground shadow-lg"
-                    : "bg-white text-accent hover:bg-primary/10 border border-border"
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
+            {categories.map((category, index) => (
+               <button
+                 key={category.id}
+                 onClick={() => setSelectedCategory(category.id)}
+                 data-sr="up" data-sr-duration="0.6" data-sr-delay={index * 0.04}
+                 className={`px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base rounded-full font-medium transition-all duration-300 ${
+                   selectedCategory === category.id
+                     ? "bg-primary text-primary-foreground shadow-lg"
+                     : "bg-white text-accent hover:bg-primary/10 border border-border"
+                 }`}
+               >
+                 {category.name}
+               </button>
+             ))}
           </div>
         </div>
       </section>
 
       {/* Products Grid */}
       <section className="py-16">
-        <div className="container mx-auto px-4 animate-fade-in motion-reduce:animate-none">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
-            {filteredProducts.map((product) => (
-              <ProductCard
-                key={product.id}
-                image={product.image}
-                title={product.title}
-                price={product.price}
-                description={product.description}
-                category={product.category}
-                galleryImages={product.galleryImages}
-                disableFlip
-              />
+            {filteredProducts.map((product, index) => (
+              <div key={product.id} data-sr="up" data-sr-duration="0.7" data-sr-delay={index * 0.04}>
+                <ProductCard
+                  image={product.image}
+                  title={product.title}
+                  price={product.price}
+                  description={product.description}
+                  category={product.category}
+                  galleryImages={product.galleryImages}
+                  disableFlip
+                />
+              </div>
             ))}
           </div>
           
           {filteredProducts.length === 0 && (
-            <div className="text-center py-16">
-              <p className="text-lg text-muted-foreground mb-4">
+            <div className="text-center py-16" data-sr="up" data-sr-duration="0.7">
+              <p className="text-lg text-muted-foreground mb-4" data-sr="fade" data-sr-duration="0.8">
                 Nenhum produto encontrado nesta categoria.
               </p>
-              <Button
-                onClick={() => setSelectedCategory("todos")}
-                className="bg-primary hover:bg-primary-hover text-primary-foreground"
-              >
-                Ver Todos os Produtos
-              </Button>
+              <div data-sr="up" data-sr-duration="0.7">
+                <Button
+                  onClick={() => setSelectedCategory("todos")}
+                  className="bg-primary hover:bg-primary-hover text-primary-foreground"
+                >
+                  Ver Todos os Produtos
+                </Button>
+              </div>
             </div>
           )}
         </div>
@@ -192,21 +253,22 @@ const Products = () => {
 
       {/* Call to Action */}
       <section className="py-16 bg-background border-t border-border">
-        <div className="container mx-auto px-4 text-center animate-fade-in motion-reduce:animate-none">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-accent mb-6 animate-slide-up motion-reduce:animate-none">
-            Não encontrou o que procura?
-          </h2>
-          <p className="text-base sm:text-lg text-foreground mb-8 max-w-2xl mx-auto animate-slide-up motion-reduce:animate-none" style={{ animationDelay: "0.15s" }}>
+        <div className="container mx-auto px-4 text-center">
+          <h2 data-sr="up" data-sr-duration="0.8" className="text-2xl sm:text-3xl lg:text-4xl font-bold text-accent mb-6">
+             Não encontrou o que procura?
+           </h2>
+          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-base sm:text-lg text-foreground mb-8 max-w-2xl mx-auto">
             Criamos produtos personalizados sob medida! Entre em contato e conte sua ideia.
           </p>
-          <Button
-            onClick={handleWhatsApp}
-            size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary-hover font-bold px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 animate-slide-up motion-reduce:animate-none"
-            style={{ animationDelay: "0.3s" }}
-          >
-            🎨 Solicitar Produto Personalizado
-          </Button>
+          <div data-sr="up" data-sr-duration="0.7">
+            <Button
+              onClick={handleWhatsApp}
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary-hover font-bold px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+            >
+              🎨 Solicitar Produto Personalizado
+            </Button>
+          </div>
         </div>
       </section>
 

@@ -46,19 +46,20 @@ const Header = () => {
         <div className="flex items-center space-x-3">
           <LogoFrame width={120} height={60} className="h-12" />
 
-          <span className={"!text-foreground text-2xl font-bold"}>
-          Criatividade Sousa
+          <span data-sr="fade" data-sr-duration="0.8" className={"text-accent text-2xl font-bold"}>
+            Criatividade Sousa
           </span>
         </div>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-8">
-          {menuItems.map((item) => (
+          {menuItems.map((item, index) => (
             item.isRoute ? (
               <Link
                 key={item.name}
                 to={item.href}
                 className="text-foreground hover:text-primary transition-colors font-medium"
+                data-sr="up" data-sr-duration="0.6" data-sr-delay={index * 0.04}
               >
                 {item.name}
               </Link>
@@ -67,6 +68,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 className="text-foreground hover:text-primary transition-colors font-medium cursor-pointer"
+                data-sr="up" data-sr-duration="0.6" data-sr-delay={index * 0.04}
                 onClick={(e) => {
                   if (!isHomePage && item.href.startsWith('#')) {
                     e.preventDefault();
@@ -98,12 +100,13 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border">
           <div className="container mx-auto px-4 py-4 space-y-4">
-            {menuItems.map((item) => (
+            {menuItems.map((item, index) => (
               item.isRoute ? (
                 <Link
                   key={item.name}
                   to={item.href}
                   className="block text-foreground hover:text-primary transition-colors font-medium py-2"
+                  data-sr="up" data-sr-duration="0.6" data-sr-delay={index * 0.04}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -113,6 +116,7 @@ const Header = () => {
                   key={item.name}
                   href={item.href}
                   className="block text-foreground hover:text-primary transition-colors font-medium py-2 cursor-pointer"
+                  data-sr="up" data-sr-duration="0.6" data-sr-delay={index * 0.04}
                   onClick={(e) => {
                     setIsMenuOpen(false);
                     if (!isHomePage && item.href.startsWith('#')) {

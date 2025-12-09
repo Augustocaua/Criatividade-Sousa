@@ -40,7 +40,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
   // Variante estática sem flip para a página Produtos
   if (disableFlip) {
     return (
-      <div className="w-full mx-auto bg-card border border-border rounded-xl shadow-lg overflow-hidden">
+      <div className="w-full mx-auto bg-card border border-border rounded-xl shadow-lg overflow-hidden" data-sr="up" data-sr-duration="0.7">
         <div className="relative">
           {galleryImages && galleryImages.length > 0 ? (
             <div
@@ -55,7 +55,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                     key={idx}
                     src={src}
                     alt={`${title} ${idx + 1}`}
-                    className="min-w-full h-full object-cover snap-start shrink-0"
+                    className="min-w-full h-full object-cover snap-start shrink-0 animate-fade-in"
                     loading="lazy"
                     onError={(e) => {
                       e.currentTarget.src = "/placeholder.svg";
@@ -68,7 +68,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
             <img
               src={image}
               alt={title}
-              className="w-full aspect-square object-cover"
+              className="w-full aspect-square object-cover animate-fade-in"
               loading="lazy"
               onError={(e) => {
                 e.currentTarget.src = "/placeholder.svg";
@@ -107,7 +107,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
         </div>
         <div className="p-4 space-y-3">
           <h3 className="text-base sm:text-lg font-bold text-accent">{title}</h3>
-          <p className="text-sm sm:text-base text-muted-foreground">{description}</p>
+          <p className="text-sm sm:text-base text-black">{description}</p>
           <div className="flex items-center justify-between">
             <span className="text-lg sm:text-xl font-bold text-accent">{price}</span>
             <Button
@@ -123,7 +123,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
   }
 
   return (
-    <div className="flip-card aspect-square w-full mx-auto">
+    <div className="flip-card aspect-square w-full mx-auto" data-sr="up" data-sr-duration="0.7">
       <div className="flip-card-inner">
         {/* Front */}
         <div className="flip-card-front bg-card border border-border shadow-lg overflow-hidden">
@@ -137,7 +137,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                         key={idx}
                         src={src}
                         alt={`${title} ${idx + 1}`}
-                        className="min-w-full h-full object-cover snap-start shrink-0"
+                        className="min-w-full h-full object-cover snap-start shrink-0 animate-fade-in"
                         loading="lazy"
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg";
@@ -150,7 +150,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                 <img
                   src={image}
                   alt={title}
-                  className="w-full h-3/4 object-cover"
+                  className="w-full h-3/4 object-cover animate-fade-in"
                   loading="lazy"
                   onError={(e) => {
                     e.currentTarget.src = "/placeholder.svg";
@@ -175,7 +175,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
         <div className="flip-card-back bg-gradient-to-br from-primary to-accent p-6 flex flex-col justify-between">
           <div>
             <h3 className="text-lg sm:text-2xl font-bold mb-3 text-center text-accent-foreground">{title}</h3>
-            <p className="text-base sm:text-lg mb-4 text-center opacity-90 text-accent-foreground">{description}</p>
+            <p className="text-sm sm:text-base text-black">{description}</p>
           </div>
           
           <div className="space-y-4">

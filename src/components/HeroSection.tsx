@@ -19,19 +19,20 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-16 sm:py-20 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Content */}
         <div className="text-center lg:text-left space-y-8">
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent animate-fade-in">
+          <h1 data-sr="up" data-sr-stagger="chars" data-sr-duration="0.9" data-sr-ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)" data-sr-step="0.06" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent">
             Presentes que{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Marcam
-            </span>{" "}
-            Momentos
+            <span className="inline-flex whitespace-nowrap items-baseline">
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Marcam
+              </span>&nbsp;Momentos
+            </span>
           </h1>
           
-          <p className="text-base sm:text-lg lg:text-2xl text-muted-foreground max-w-2xl animate-slide-up leading-relaxed">
+          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)" data-sr-step="0.08" className="text-base sm:text-lg lg:text-2xl text-black max-w-2xl leading-relaxed">
              Presentes Personalizadas para todas as ocasiões especiais da sua vida
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up">
+          <div data-sr="up" data-sr-duration="0.7" className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button
               onClick={handleWhatsApp}
               size="lg"
@@ -42,11 +43,12 @@ const HeroSection = () => {
           </div>
 
           {/* Features */}
-          <div className="flex flex-wrap gap-6 justify-center lg:justify-start animate-slide-in-left">
-            {["🎨 Design Exclusivo", "💝 Presentes Únicos"].map((feature) => (
+          <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
+            {["🎨 Design Exclusivo", "💝 Presentes Únicos"].map((feature, index) => (
               <div
                 key={feature}
-                className="bg-card border border-border px-3 py-2 rounded-full text-foreground font-medium text-sm sm:text-base shadow-sm"
+                data-sr="up" data-sr-duration="0.7" data-sr-delay={index * 0.06}
+                className="bg-card border border-border px-3 py-2 rounded-full text-black font-medium text-sm sm:text-base shadow-sm"
               >
                 {feature}
               </div>
@@ -55,28 +57,29 @@ const HeroSection = () => {
         </div>
 
         {/* Right Image */}
-        <div className="flex justify-center animate-slide-in-right">
+        <div className="flex justify-center">
           <div className="relative">
             <img
               src="/principal.jpeg"
               alt="Imagem principal do herói"
+              data-sr="up" data-sr-duration="0.8"
               className="w-[180px] sm:w-[220px] md:w-[256px] lg:w-[384px] xl:w-[512px] h-auto rounded-3xl shadow-2xl"
             />
             {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full font-bold shadow-lg animate-bounce">
-              🎁 Personalizado
-            </div>
-            <div className="absolute -bottom-4 -left-4 bg-primary text-primary-foreground px-4 py-2 rounded-full font-bold shadow-lg animate-bounce delay-1000">
-              ❤️ Com Amor
-            </div>
+            <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full font-bold shadow-lg" data-sr="fade" data-sr-duration="0.8">
+               🎁 Personalizado
+             </div>
+            <div className="absolute -bottom-4 -left-4 bg-primary text-primary-foreground px-4 py-2 rounded-full font-bold shadow-lg" data-sr="fade" data-sr-duration="0.8">
+               ❤️ Com Amor
+             </div>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="w-6 h-10 border-2 border-muted rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-muted-foreground rounded-full mt-2 animate-pulse" />
+          <div className="w-1 h-3 bg-muted-foreground rounded-full mt-2" />
         </div>
       </div>
     </section>

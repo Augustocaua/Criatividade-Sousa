@@ -27,15 +27,15 @@ const Depoimentos = () => {
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container mx-auto px-4 text-center animate-fade-in motion-reduce:animate-none">
-          <h1 className="text-4xl lg:text-6xl font-bold text-accent mb-6 animate-slide-up motion-reduce:animate-none">
+        <div className="container mx-auto px-4 text-center">
+          <h1 data-sr="up" data-sr-duration="0.9" className="text-4xl lg:text-6xl font-bold text-accent mb-6">
             O que nossos{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               clientes
             </span>{" "}
             dizem
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-slide-up motion-reduce:animate-none" style={{ animationDelay: "0.15s" }}>
+          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Clientes satisfeitos compartilham suas experiências com nossos presentes personalizados
           </p>
           
@@ -65,8 +65,8 @@ const Depoimentos = () => {
               return (
                 <div
                   key={rawSrc}
-                  className="group overflow-hidden rounded-2xl bg-card border border-border shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  data-sr="up" data-sr-duration="0.7" data-sr-delay={index * 0.06}
+                  className="group overflow-hidden rounded-2xl bg-card border border-border shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <div className="aspect-[3/4] sm:aspect-[4/3]">
                     <img
@@ -85,15 +85,16 @@ const Depoimentos = () => {
 
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-br from-secondary to-muted">
-        <div className="container mx-auto px-4 text-center animate-fade-in motion-reduce:animate-none">
-          <h2 className="text-3xl lg:text-4xl font-bold text-accent mb-6 animate-slide-up motion-reduce:animate-none">
+        <div className="container mx-auto px-4 text-center">
+          <h2 data-sr="up" data-sr-duration="0.8" className="text-3xl lg:text-4xl font-bold text-accent mb-6">
             Quer ser o próximo cliente satisfeito?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-slide-up motion-reduce:animate-none" style={{ animationDelay: "0.15s" }}>
-            Junte-se a centenas de pessoas que já transformaram momentos especiais em lembranças inesquecíveis
+          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+-            Junte-se a centenas de pessoas que já transformaram momentos especiais em lembranças inesquecíveis
+            Junte-se a centenas de pessoas que já transformaram <span className="whitespace-nowrap">momentos especiais</span> em lembranças inesquecíveis
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div data-sr="up" data-sr-duration="0.7" className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={handleWhatsApp}
               size="lg"

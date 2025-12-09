@@ -24,11 +24,11 @@ const Contatos = () => {
       <main>
         {/* Hero Section */}
         <section className="bg-white text-foreground py-20">
-          <div className="container mx-auto px-4 text-center animate-fade-in motion-reduce:animate-none">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up motion-reduce:animate-none">
+          <div className="container mx-auto px-4 text-center">
+            <h1 data-sr="up" data-sr-duration="0.9" className="text-4xl md:text-6xl font-bold mb-6">
               Entre em Contato
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto animate-slide-up motion-reduce:animate-none" style={{ animationDelay: "0.15s" }}>
+            <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-xl md:text-2xl text-black max-w-3xl mx-auto">
               Estamos aqui para transformar suas ideias em presentes únicos e inesquecíveis. 
               Fale conosco e vamos criar algo especial juntos!
             </p>
@@ -37,19 +37,19 @@ const Contatos = () => {
 
         {/* Contact Information Section */}
         <section className="py-20 bg-white">
-          <div className="container mx-auto px-4 animate-fade-in motion-reduce:animate-none">
+          <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
               
               {/* Contact Info */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-3xl font-bold text-accent mb-8 animate-slide-up motion-reduce:animate-none">
+                  <h2 data-sr="up" data-sr-duration="0.8" className="text-3xl font-bold text-accent mb-8">
                     Informações de Contato
                   </h2>
                 </div>
 
                 {/* Address */}
-                <div className="flex items-start space-x-4 p-6 bg-card rounded-lg border">
+                <div data-sr="up" data-sr-duration="0.7" data-sr-delay="0.00" className="flex items-start space-x-4 p-6 bg-card rounded-lg border">
                   <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Endereço</h3>
@@ -61,7 +61,7 @@ const Contatos = () => {
                 </div>
 
                 {/* Phone */}
-                <div className="flex items-start space-x-4 p-6 bg-card rounded-lg border">
+                <div data-sr="up" data-sr-duration="0.7" data-sr-delay="0.06" className="flex items-start space-x-4 p-6 bg-card rounded-lg border">
                   <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Telefone</h3>
@@ -74,7 +74,7 @@ const Contatos = () => {
                 </div>
 
                 {/* Email */}
-                <div className="flex items-start space-x-4 p-6 bg-card rounded-lg border">
+                <div data-sr="up" data-sr-duration="0.7" data-sr-delay="0.12" className="flex items-start space-x-4 p-6 bg-card rounded-lg border">
                   <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">E-mail</h3>
@@ -87,7 +87,7 @@ const Contatos = () => {
                 </div>
 
                 {/* Business Hours */}
-                <div className="flex items-start space-x-4 p-6 bg-card rounded-lg border">
+                <div data-sr="up" data-sr-duration="0.7" data-sr-delay="0.18" className="flex items-start space-x-4 p-6 bg-card rounded-lg border">
                   <Clock className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Horário de Funcionamento</h3>
@@ -103,13 +103,13 @@ const Contatos = () => {
               {/* Social Media & CTA */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-3xl font-bold text-accent mb-8">
+                  <h2 data-sr="up" data-sr-duration="0.8" className="text-3xl font-bold text-accent mb-8">
                     Redes Sociais
                   </h2>
                 </div>
 
                 {/* WhatsApp */}
-                <div className="p-8 bg-green-50 rounded-lg border border-green-200">
+                <div data-sr="up" data-sr-duration="0.7" data-sr-delay="0.00" className="p-8 bg-green-50 rounded-lg border border-green-200">
                   <div className="flex items-center space-x-4 mb-4">
                     <MessageCircle className="h-8 w-8 text-green-600" />
                     <div>
@@ -130,7 +130,7 @@ const Contatos = () => {
                 </div>
 
                 {/* Instagram */}
-                <div className="p-8 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg border border-purple-200">
+                <div data-sr="up" data-sr-duration="0.7" data-sr-delay="0.06" className="p-8 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg border border-purple-200">
                   <div className="flex items-center space-x-4 mb-4">
                     <Instagram className="h-8 w-8 text-purple-600" />
                     <div>
@@ -150,12 +150,12 @@ const Contatos = () => {
                   </Button>
                 </div>
                 {/* Shopee */}
-                <div className="p-8 bg-[#FFF1EB] rounded-lg border border-[#EE4D2D]/40">
+                <div data-sr="up" data-sr-duration="0.7" data-sr-delay="0.12" className="p-8 bg-[#FFF1EB] rounded-lg border border-[#EE4D2D]/40">
                   <div className="flex items-center space-x-4 mb-4">
                     <ShoppingBag className="h-8 w-8 text-[#EE4D2D]" />
                     <div>
                       <h3 className="text-xl font-semibold text-[#B23A21]">Shopee</h3>
-                      <p className="text-[#EE4D2D]">Loja Criatividade Sousa</p>
+                      <p className="text-[#EE4D2D]">Loja <span className="text-accent">Criatividade Sousa</span></p>
                     </div>
                   </div>
                   <p className="text-[#B23A21] mb-4">
@@ -171,14 +171,14 @@ const Contatos = () => {
                 </div>
 
                 {/* Contact CTA */}
-                <div className="p-8 bg-primary/5 rounded-lg border border-primary/20">
-                  <h3 className="text-xl font-semibold text-foreground mb-4 animate-slide-up motion-reduce:animate-none">
+                <div data-sr="up" data-sr-duration="0.7" data-sr-delay="0.18" className="p-8 bg-primary/5 rounded-lg border border-primary/20">
+                  <h3 data-sr="up" data-sr-duration="0.8" className="text-xl font-semibold text-foreground mb-4">
                     Pronto para criar algo especial?
                   </h3>
-                  <p className="text-muted-foreground mb-6 animate-slide-up motion-reduce:animate-none" style={{ animationDelay: "0.15s" }}>
+                  <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-black mb-6">
                     Entre em contato conosco e vamos transformar sua ideia em um presente inesquecível!
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div data-sr="up" data-sr-duration="0.7" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <Button onClick={handleWhatsApp} className="w-full">
                       <MessageCircle className="h-4 w-4 mr-2" />
                       WhatsApp

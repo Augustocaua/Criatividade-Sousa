@@ -14,6 +14,7 @@ const LogoFrame: React.FC<LogoFrameProps> = ({
 }) => {
   return (
     <img 
+      data-sr="fade" data-sr-duration="0.8"
       className={className}
       src={logo}
       alt="Criatividade Sousa Logo"

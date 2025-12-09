@@ -140,8 +140,9 @@
     font-weight: bold;
   }
 
-  p, span, div, button, input, textarea, label {
-    color: hsl(var(--black)) !important;
+  /* Texto padrão: preto, sem forçar spans para permitir cores customizadas */
+  p, div, button, input, textarea, label {
+    color: hsl(var(--black));
   }
 
   /* Links com cor dourada e hover */
@@ -296,7 +297,7 @@
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(var(--sr-offset-y, 40px));
   }
   to {
     opacity: 1;
@@ -307,7 +308,7 @@
 @keyframes slide-up {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(var(--sr-offset-y, 40px));
   }
   to {
     opacity: 1;
@@ -318,7 +319,7 @@
 @keyframes slide-in-left {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(var(--sr-offset-x, -30px));
   }
   to {
     opacity: 1;
@@ -329,7 +330,7 @@
 @keyframes slide-in-right {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(var(--sr-offset-x, 30px));
   }
   to {
     opacity: 1;
@@ -384,8 +385,8 @@
 .animated-bg {
   /* Layered subtle gradients using brand variables */
   background-image:
-    radial-gradient(1200px 800px at 15% 25%, hsl(var(--golden-beige) / 0.08), transparent 60%),
-    radial-gradient(1000px 600px at 85% 75%, hsl(var(--golden-beige-light) / 0.10), transparent 55%),
+    radial-gradient(1200px 800px at 15% 25%, hsla(35, 35%, 63%, 0.08), transparent 60%),
+    radial-gradient(1000px 600px at 85% 75%, hsla(35, 45%, 75%, 0.10), transparent 55%),
     linear-gradient(135deg, hsl(var(--white)), hsl(var(--off-white)));
   background-size: 200% 200%, 200% 200%, 200% 200%;
   background-position: 0% 0%, 100% 0%, 0% 0%;
@@ -411,4 +412,58 @@ p, a, button, input, textarea, label, span, div {
   font-family: 'Cormorant Garamond', serif !important;
   line-height: 1.75;
   letter-spacing: 0.01em;
+}
+
+/* Scroll Reveal attribute-based animations */
+[data-sr="fade"] { animation: fade-in var(--sr-duration, 0.8s) var(--sr-ease, cubic-bezier(0.22, 1, 0.36, 1)) both; }
+[data-sr="up"] { animation: slide-up var(--sr-duration, 0.8s) var(--sr-ease, cubic-bezier(0.22, 1, 0.36, 1)) both; }
+[data-sr="left"] { animation: slide-in-left var(--sr-duration, 0.8s) var(--sr-ease, cubic-bezier(0.22, 1, 0.36, 1)) both; }
+[data-sr="right"] { animation: slide-in-right var(--sr-duration, 0.8s) var(--sr-ease, cubic-bezier(0.22, 1, 0.36, 1)) both; }
+
+.sr-item { display: inline-block; }
+
+/* Pulso sutil para CTAs em dourado bege */
+.pulse-glow { position: relative; }
+.pulse-glow::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: 0 0 0 0 rgba(212,170,110,0);
+  animation: pulse-glow 0.5s ease-in-out;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(212,170,110,0); }
+  50% { box-shadow: 0 0 20px 4px rgba(212,170,110,0.35); }
+  100% { box-shadow: 0 0 0 0 rgba(212,170,110,0); }
+}
+
+/* Desenho de linha para divisores */
+.line-draw { transform-origin: left center; }
+[data-sr].line-draw { animation: draw-line var(--sr-duration, 0.8s) var(--sr-ease, ease-in-out) both; }
+@keyframes draw-line {
+  from { transform: scaleX(0); opacity: 0; }
+  to { transform: scaleX(1); opacity: 1; }
+}
+
+/* Mask/Clip reveal for progressive text */
+[data-sr-progress] .sr-item {
+  opacity: 0;
+  transform: translateY(40px);
+  clip-path: inset(100% 0 0 0);
+  transition: opacity var(--sr-duration, 0.8s) var(--sr-ease, cubic-bezier(0.22, 1, 0.36, 1)),
+              transform var(--sr-duration, 0.8s) var(--sr-ease, cubic-bezier(0.22, 1, 0.36, 1)),
+              clip-path var(--sr-duration, 0.8s) var(--sr-ease, cubic-bezier(0.22, 1, 0.36, 1));
+}
+[data-sr-progress] .sr-item:not(.sr-paused) {
+  opacity: 1;
+  transform: translateY(0);
+  clip-path: inset(0 0 0 0);
+}
+
+/* Ensure container participates in progress transitions */
+[data-sr-progress] {
+  will-change: transform, opacity, clip-path;
 }

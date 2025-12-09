@@ -16,7 +16,7 @@ const CTASection = () => {
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent mb-6 animate-fade-in">
+          <h2 data-sr="up" data-sr-duration="0.8" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent mb-6">
             Transformamos{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               carinho
@@ -27,12 +27,12 @@ const CTASection = () => {
             </span>
           </h2>
           
-          <p className="text-base sm:text-lg lg:text-2xl text-muted-foreground mb-8 leading-relaxed animate-slide-up">
+          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-base sm:text-lg lg:text-2xl text-black mb-8 leading-relaxed">
             Cada presente é uma oportunidade de demonstrar amor, carinho e atenção. 
             Deixe-nos criar algo especial que ficará para sempre na memória de quem você ama.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up">
+          <div data-sr="up" data-sr-duration="0.7" className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button
               onClick={handleWhatsApp}
               size="lg"
@@ -42,13 +42,13 @@ const CTASection = () => {
             </Button>
             
             <div className="flex items-center gap-2 text-muted-foreground">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <div className="w-2 h-2 bg-primary rounded-full" />
               <span className="font-medium">Online agora</span>
             </div>
           </div>
 
           {/* Trust indicators */}
-          <div className="mt-10 sm:mt-12 flex flex-wrap justify-center gap-8 text-muted-foreground animate-fade-in">
+          <div data-sr="up" data-sr-duration="0.7" className="mt-10 sm:mt-12 flex flex-wrap justify-center gap-8 text-muted-foreground">
             <div className="flex items-center gap-2">
               <span className="text-xl sm:text-2xl">✨</span>
               <span className="font-medium">Produtos Únicos</span>

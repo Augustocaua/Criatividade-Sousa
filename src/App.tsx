@@ -11,14 +11,13 @@ import NotFound from "./pages/NotFound";
 import SobreNos from "./pages/SobreNos";
 import PoliticaPrivacidade from "./pages/politica-de-privacidade";
 import { useEffect } from "react";
-import { initScrollReveal } from "./lib/scrollReveal";
+import { initScrollReveal } from "@/lib/scrollReveal";
 
 const queryClient = new QueryClient();
 
 function ScrollRevealInit() {
   const location = useLocation();
   useEffect(() => {
-    // Re-inicializa o Scroll Reveal a cada mudança de rota
     initScrollReveal({ once: true, rootMargin: "0px 0px -10% 0px", threshold: 0.1 });
   }, [location.pathname]);
   return null;

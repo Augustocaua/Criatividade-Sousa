@@ -14,7 +14,7 @@ const ProductsSection = () => {
     },
     {
       image: basketProduct,
-      title: "Cestas personalizadas",
+      title: "Cestas ",
       price: "A partir de R$ 89",
       description: "Cestas especiais com mimos e presentes para conquistar corações",
       category: "Romance"
@@ -39,10 +39,10 @@ const ProductsSection = () => {
     <section id="produtos" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent mb-4 animate-fade-in">
+          <h2 data-sr="up" data-sr-duration="0.8" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent mb-4">
             Nossos Produtos
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto animate-slide-up">
+          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-base sm:text-lg text-black max-w-3xl mx-auto">
             Descubra nossa coleção especial de presentes personalizados. 
             Cada produto é criado com carinho e atenção aos detalhes.
           </p>
@@ -52,8 +52,7 @@ const ProductsSection = () => {
           {products.map((product, index) => (
             <div
               key={product.title}
-              className="animate-fade-in"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              data-sr="up" data-sr-duration="0.8" data-sr-delay={index * 0.08}
             >
               <ProductCard {...product} />
             </div>
@@ -61,7 +60,7 @@ const ProductsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-lg text-muted-foreground mb-6">
+          <p className="text-lg text-black mb-6">
             Não encontrou o que procura? Temos muito mais!
           </p>
           <a

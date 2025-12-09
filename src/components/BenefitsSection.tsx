@@ -28,13 +28,11 @@ const BenefitsSection = () => {
     <section id="sobre-nos" className="py-16 sm:py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent mb-4 animate-fade-in">
+          <h2 data-sr="up" data-sr-duration="0.8" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent mb-4">
             Por que escolher a{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Criatividade Sousa?
-            </span>
+            <span className="text-accent">Criatividade Sousa?</span>
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto animate-slide-up">
+          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-base sm:text-lg text-black max-w-3xl mx-auto">
             Transformamos ideias em presentes únicos com qualidade e carinho
           </p>
         </div>
@@ -45,22 +43,22 @@ const BenefitsSection = () => {
             return (
               <div
                 key={benefit.title}
-                className={`text-center group animate-slide-in-${index % 2 === 0 ? 'left' : 'right'}`}
-                style={{ animationDelay: `${index * 0.2}s` }}
+                data-sr="up" data-sr-duration="0.7" data-sr-delay={index * 0.06}
+                className="text-center group"
               >
                 <div className="relative mb-6">
                   <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary to-accent rounded-full shadow-lg group-hover:shadow-xl transform group-hover:scale-110 transition-all duration-300">
                     <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                   </div>
                   {/* Decorative ring */}
-                  <div className="absolute inset-0 w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors duration-300 animate-pulse" />
+                  <div className="absolute inset-0 w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors duration-300" />
                 </div>
                 
-                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                  {benefit.title}
-                </h3>
+                <h3 className="text-lg sm:text-xl font-bold text-black mb-3 group-hover:text-primary transition-colors duration-300">
+                   {benefit.title}
+                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                <p className="text-black leading-relaxed text-sm sm:text-base">
                   {benefit.description}
                 </p>
               </div>
