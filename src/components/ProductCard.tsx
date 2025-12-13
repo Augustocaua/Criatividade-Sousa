@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface ProductCardProps {
   image: string;
@@ -14,11 +15,6 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ image, title, price, description, category, galleryImages, disableFlip, categoryLabel }: ProductCardProps) => {
-  const handleWhatsApp = () => {
-    const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre: ${title} 🎁`);
-    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
-  };
-
   // Carousel controls for static variant
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const scrollByOne = (direction: "prev" | "next") => {
@@ -99,6 +95,18 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
             </>
           )}
 
+          {/* CTA central overlay */}
+          {!disableFlip && (
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <Link
+                to={`/produtos?categoria=${category}`}
+                className="pointer-events-auto mx-auto w-11/12 sm:w-auto bg-white text-accent hover:bg-white/90 font-bold px-6 py-3 rounded-full transition-all duration-300 text-center shadow-md"
+              >
+                ver mais produtos
+              </Link>
+            </div>
+          )}
+
           <div className="absolute top-4 left-4">
             <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
               {categoryLabel ?? category}
@@ -108,14 +116,9 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
         <div className="p-4 space-y-3">
           <h3 className="text-base sm:text-lg font-bold text-accent">{title}</h3>
           <p className="text-sm sm:text-base text-black">{description}</p>
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col items-center gap-3">
             <span className="text-lg sm:text-xl font-bold text-accent">{price}</span>
-            <Button
-              onClick={handleWhatsApp}
-              className="bg-primary text-primary-foreground hover:bg-primary-hover font-bold px-4 py-2 rounded-full transition-all duration-300"
-            >
-              💬 Comprar Agora
-            </Button>
+
           </div>
         </div>
       </div>
@@ -158,6 +161,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                 />
               )
             }
+
             <div className="absolute top-4 left-4">
               <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
                 {categoryLabel ?? category}
@@ -172,23 +176,17 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
         </div>
 
         {/* Back */}
-        <div className="flip-card-back bg-gradient-to-br from-primary to-accent p-6 flex flex-col justify-between">
-          <div>
-            <h3 className="text-lg sm:text-2xl font-bold mb-3 text-center text-accent-foreground">{title}</h3>
-            <p className="text-sm sm:text-base text-black">{description}</p>
-          </div>
-          
-          <div className="space-y-4">
-            <div className="text-center">
-              <span className="text-3xl font-bold text-accent-foreground">{price}</span>
-            </div>
-            
-            <Button
-              onClick={handleWhatsApp}
-              className="w-full bg-white text-accent hover:bg-white/90 font-bold py-3 rounded-full transition-all duration-300 transform hover:scale-105"
+        <div className="flip-card-back bg-gradient-to-br from-primary to-accent p-6 flex">
+          <div className="flex flex-col items-center justify-center text-center gap-4 w-full">
+            <h3 className="text-lg sm:text-2xl font-bold text-accent-foreground">{title}</h3>
+            <p className="text-sm sm:text-base text-black max-w-prose">{description}</p>
+            <span className="text-3xl font-bold text-accent-foreground">{price}</span>
+            <Link
+              to={`/produtos?categoria=${category}`}
+              className="mx-auto w-11/12 sm:w-auto bg-white text-accent hover:bg-white/90 font-bold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-center shadow-md"
             >
-              💬 Comprar Agora
-            </Button>
+              ver mais produtos
+            </Link>
           </div>
         </div>
       </div>

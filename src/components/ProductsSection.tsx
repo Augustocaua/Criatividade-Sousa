@@ -10,28 +10,32 @@ const ProductsSection = () => {
       title: "Canecas Personalizadas",
       price: "A partir de R$ 36,99",
       description: "Canecas únicas com seu design personalizado para momentos especiais",
-      category: "Personalizado"
+      category: "canecas",
+      categoryLabel: "Canecas personalizadas"
     },
     {
-      image: basketProduct,
-      title: "Cestas ",
-      price: "A partir de R$ 89",
-      description: "Cestas especiais com mimos e presentes para conquistar corações",
-      category: "Romance"
+      image: "/imagem de adesivos.jpeg",
+      title: "Etiquetas Escolares",
+      price: "A partir de R$ 24,95",
+      description: "Etiquetas escolares grandes 4x6cm",
+      category: "especiais",
+      categoryLabel: "Adesivos personalizados"
     },
     {
       image: "/imagem de combo.jpeg",
       title: "Combos Personalizados",
       price: "A partir de R$ 120",
       description: "Combos personalizados para eventos e comemorações empresariais",
-      category: "Corporativo"
+      category: "corporativo",
+      categoryLabel: "combos"
     },
     {
       image: "/tete-convertido-de-jpeg.jpeg",
       title: "Topos de Bolos",
       price: "A partir de R$ 45",
       description: "Ideias originais e criativas para surpreender pessoas especiais",
-      category: "Criativo"
+      category: "topos-de-bolos",
+      categoryLabel: "Topos de bolos"
     }
   ];
 

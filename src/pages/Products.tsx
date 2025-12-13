@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/ProductCard";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { useSearchParams } from "react-router-dom";
 
 // Importar imagens dos produtos
 import mugProduct from "@/assets/mug-product.jpg";
@@ -14,6 +15,14 @@ const academiaShoppe: string = "/academiashoppe.jpeg";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("todos");
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const categoria = searchParams.get("categoria");
+    if (categoria) {
+      setSelectedCategory(categoria);
+    }
+  }, [searchParams]);
 
   const categories = [
     { id: "todos", name: "Todos os Produtos" },
@@ -21,21 +30,22 @@ const Products = () => {
     { id: "cestas", name: "Combos de Canecas" },
     { id: "corporativo", name: "Kits Corporativos" },
     { id: "especiais", name: "Adesivos personalizados em Vinil" },
-    { id: "fotos", name: "Fotos" }
+    { id: "fotos", name: "Fotos" },
+    { id: "topos-de-bolos", name: "Topos de bolos" }
   ];
 
   const products = [
     {
       id: 1,
-      image: academiaShoppe,
-      title: "Canecatura ",
+      image: "/canecaturas/1.webp",
+      title: "Canecatura",
       price: "R$ 39,00",
       description: "Caneca de cerâmica com impressão de alta qualidade. Personalize com foto, nome ou frase especial.",
       category: "canecas",
       galleryImages: [
-        "/canecaturas/caneca-numero-1.jpeg",
-        "/canecaturas/numero-2.jpeg",
-        "/canecaturas/numero-3.jpeg",
+        "/canecaturas/1.webp",
+        "/canecaturas/2.webp",
+        "/canecaturas/3.webp",
       ]
     },
     {
@@ -48,11 +58,18 @@ const Products = () => {
     },
     {
       id: 3,
-      image: corporateKit,
-      title: "Kit Corporativo Executivo",
-      price: "R$ 120,00",
-      description: "Kit profissional com caneca, caderno e caneta personalizados com logo da empresa.",
-      category: "corporativo"
+      image: encodeURI("/Presente menino criativo infantil/1.jpeg"),
+      title: "Caneca de colorir pinte e lave/Presente menino criativo infantil",
+      price: "R$ 38,99",
+      description: "Caneca de colorir pinte e lave/Presente Crianças/com caixa e laço/Caneca porcelana/Presente menino criativo infantil 🎨☕",
+      category: "canecas",
+      galleryImages: [
+        encodeURI("/Presente menino criativo infantil/1.jpeg"),
+        encodeURI("/Presente menino criativo infantil/2.jpeg"),
+        encodeURI("/Presente menino criativo infantil/3.jpeg"),
+        encodeURI("/Presente menino criativo infantil/4.jpeg"),
+        encodeURI("/Presente menino criativo infantil/5.jpeg"),
+      ]
     },
     {
       id: 4,
@@ -65,7 +82,7 @@ const Products = () => {
     {
       id: 12,
       image: encodeURI("/Caneca de colorir pinte e lave/1.jpeg"),
-      title: "Caneca de Colorir Meninas",
+      title: "Caneca de colorir pinte e lave /Presente menina criativo infantil",
       price: "R$ 38,99",
       description: "Caneca de colorir pinte e lave / Presente Crianças / com caixa e laço / Caneca porcelana / Presente menina criativo infantil 🎨☕",
       category: "canecas",
