@@ -53,7 +53,7 @@ const Contatos = () => {
                   <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Endereço</h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-black">
                     Bairro São gonçalo do retiro <br />
                       Salvador - BA, 40000-000
                     </p>
@@ -65,8 +65,8 @@ const Contatos = () => {
                   <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Telefone</h3>
-                    <p className="text-muted-foreground">
-                      <a href="tel:+5571987929082" className="hover:text-primary transition-colors">
+                    <p className="text-black">
+                      <a href="tel:+5571987929082" className="text-black hover:text-primary transition-colors">
                         (71) 98792-9082
                       </a>
                     </p>
@@ -78,8 +78,8 @@ const Contatos = () => {
                   <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">E-mail</h3>
-                    <p className="text-muted-foreground">
-                      <a href="mailto:contato@criatividadesousa.com.br" className="hover:text-primary transition-colors">
+                    <p className="text-black">
+                      <a href="mailto:contato@criatividadesousa.com.br" className="text-black hover:text-primary transition-colors">
                         contato@criatividadesousa.com.br
                       </a>
                     </p>

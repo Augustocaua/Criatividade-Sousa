@@ -90,7 +90,6 @@ const Depoimentos = () => {
             Quer ser o próximo cliente satisfeito?
           </h2>
           <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
--            Junte-se a centenas de pessoas que já transformaram momentos especiais em lembranças inesquecíveis
             Junte-se a centenas de pessoas que já transformaram <span className="whitespace-nowrap">momentos especiais</span> em lembranças inesquecíveis
           </p>
           

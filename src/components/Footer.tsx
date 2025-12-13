@@ -23,8 +23,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6" data-sr="up" data-sr-duration="0.7">
               <img src={logo} alt="Criatividade Sousa" className="h-12 w-auto filter brightness-0 invert" />
--              <span className="text-2xl font-bold">Criatividade Sousa</span>
-+              <span className="text-2xl font-bold text-accent">Criatividade Sousa</span>
+              <span className="text-2xl font-bold text-accent">Criatividade Sousa</span>
             </div>
             
             <p className="text-black mb-6 leading-relaxed max-w-md" data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06">

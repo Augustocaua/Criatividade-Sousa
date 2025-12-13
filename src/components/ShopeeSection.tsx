@@ -61,8 +61,7 @@ const ShopeeSection = () => {
           {/* Texto à direita */}
           <div className="text-center lg:text-left">
             <h3 data-sr="up" data-sr-duration="0.8" className="text-2xl sm:text-3xl font-bold text-[#2F2F2F] tracking-tight mb-2 lg:text-center">
-            -              Loja Shopee Criatividade Sousa
-            +              Loja Shopee <span className="text-accent">Criatividade Sousa</span>
+              Loja Shopee <span className="text-accent">Criatividade Sousa</span>
             </h3>
             <h2 data-sr="up" data-sr-duration="0.8" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#FA4F26] tracking-tight mb-4">
               Acompanhe nossa loja da Shopee
