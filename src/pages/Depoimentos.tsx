@@ -35,24 +35,12 @@ const Depoimentos = () => {
             </span>{" "}
             dizem
           </h1>
-          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-xl text-black max-w-3xl mx-auto mb-8">
             Clientes satisfeitos compartilham suas experiências com nossos presentes personalizados
           </p>
           
-          {/* Estatísticas */}
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            <div className="text-center">
-              <div className="text-muted-foreground">Clientes Felizes</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">5.0</div>
-              <div className="text-muted-foreground">Avaliação Média</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">5+</div>
-              <div className="text-muted-foreground">Anos de Experiência</div>
-            </div>
-          </div>
+
+
         </div>
       </section>
 
