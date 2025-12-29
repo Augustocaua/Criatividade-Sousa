@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -12,9 +12,10 @@ interface ProductCardProps {
   galleryImages?: string[];
   disableFlip?: boolean;
   categoryLabel?: string;
+  shoppeLink?: string; // opcional: link da Shopee
 }
 
-const ProductCard = ({ image, title, price, description, category, galleryImages, disableFlip, categoryLabel }: ProductCardProps) => {
+const ProductCard = ({ image, title, price, description, category, galleryImages, disableFlip, categoryLabel, shoppeLink }: ProductCardProps) => {
   // Carousel controls for static variant
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const scrollByOne = (direction: "prev" | "next") => {
@@ -32,6 +33,17 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
       scrollByOne("next");
     }
   };
+
+  // CTA: Comprar agora via WhatsApp
+  const buyNow = () => {
+    const message = encodeURIComponent(
+      `Olá! Quero comprar ${title}${price ? ` (${price})` : ''}. Pode me ajudar?`
+    );
+    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
+  };
+
+  // Ao clicar, exibir opções (WhatsApp e Shopee) quando houver shoppeLink
+  const [showBuyOptions, setShowBuyOptions] = useState(false);
 
   // Variante estática sem flip para a página Produtos
   if (disableFlip) {
@@ -53,6 +65,9 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                     alt={`${title} ${idx + 1}`}
                     className="min-w-full h-full object-cover snap-start shrink-0 animate-fade-in"
                     loading="lazy"
+                    decoding="async"
+                    width={1200}
+                    height={1200}
                     onError={(e) => {
                       e.currentTarget.src = "/placeholder.svg";
                     }}
@@ -66,6 +81,9 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
               alt={title}
               className="w-full aspect-square object-cover animate-fade-in"
               loading="lazy"
+              decoding="async"
+              width={1200}
+              height={1200}
               onError={(e) => {
                 e.currentTarget.src = "/placeholder.svg";
               }}
@@ -118,8 +136,48 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
           <p className="text-sm sm:text-base text-black">{description}</p>
           <div className="flex flex-col items-center gap-3">
             <span className="text-lg sm:text-xl font-bold text-accent">{price}</span>
-
           </div>
+
+          {shoppeLink ? (
+            <>
+              <Button
+                onClick={() => setShowBuyOptions((v) => !v)}
+                aria-expanded={showBuyOptions}
+                aria-controls="buy-options"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary-hover font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              >
+                {showBuyOptions ? "Fechar opções" : "🛒 Compre agora"}
+              </Button>
+              <div
+                id="buy-options"
+                className={`overflow-hidden transition-all duration-300 ease-out ${showBuyOptions ? "opacity-100 translate-y-0 scale-100 max-h-40 pointer-events-auto mt-3" : "opacity-0 -translate-y-1 scale-[0.98] max-h-0 pointer-events-none"}`}
+              >
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-white/70 backdrop-blur-sm p-3 rounded-xl ring-1 ring-border shadow-lg">
+                  <Button
+                    onClick={buyNow}
+                    className="w-full bg-green-600 text-white hover:bg-green-700 font-bold px-4 py-2 rounded-full shadow-md transition-all"
+                  >
+                    💬 WhatsApp
+                  </Button>
+                  <a
+                    href={shoppeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center bg-orange-600 text-white hover:bg-orange-700 font-bold px-4 py-2 rounded-full shadow-md transition-all"
+                  >
+                    🛍️ Ir para a Shopee
+                  </a>
+                </div>
+              </div>
+            </>
+          ) : (
+            <Button
+              onClick={buyNow}
+              className="w-full bg-primary text-primary-foreground hover:bg-primary-hover font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+              🛒 Compre agora
+            </Button>
+          )}
         </div>
       </div>
     );
@@ -142,6 +200,9 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                         alt={`${title} ${idx + 1}`}
                         className="min-w-full h-full object-cover snap-start shrink-0 animate-fade-in"
                         loading="lazy"
+                        decoding="async"
+                        width={1200}
+                        height={1200}
                         onError={(e) => {
                           e.currentTarget.src = "/placeholder.svg";
                         }}
@@ -155,6 +216,9 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                   alt={title}
                   className="w-full h-3/4 object-cover animate-fade-in"
                   loading="lazy"
+                  decoding="async"
+                  width={1200}
+                  height={900}
                   onError={(e) => {
                     e.currentTarget.src = "/placeholder.svg";
                   }}

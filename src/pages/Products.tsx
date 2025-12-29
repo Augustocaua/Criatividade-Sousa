@@ -46,7 +46,8 @@ const Products = () => {
         "/canecaturas/1.webp",
         "/canecaturas/2.webp",
         "/canecaturas/3.webp",
-      ]
+      ],
+      shoppeLink: "https://shopee.com.br/Caneca-Caricatura-Personalizada-Presente-Criativo-Desenho-Foto-%C3%9Anica-Arte-Namorados-M%C3%A3es-caneca-com-frase-i.1258645456.22694527296?extraParams=%7B%22display_model_id%22%3A199612913833%7D&is_from_login=true"
     },
     {
       id: 2,
@@ -183,28 +184,48 @@ const Products = () => {
     window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
   };
 
+  const handleBuyNow = (product: { title: string; price?: string }) => {
+    const message = encodeURIComponent(
+      `Olá! Quero comprar ${product.title}${product.price ? ` (${product.price})` : ''}. Pode me ajudar?`
+    );
+    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-background animated-bg">
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 data-sr="up" data-sr-duration="0.8" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent mb-6">
-             Nossos Produtos
-           </h1>
-          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-base sm:text-lg text-foreground max-w-3xl mx-auto mb-8">
-            Descubra nossa coleção completa de presentes personalizados. 
-            Cada produto é criado com carinho e atenção aos detalhes.
-          </p>
-          <div data-sr="up" data-sr-duration="0.7">
-            <Button
-              onClick={handleWhatsApp}
-              size="lg"
-              className="bg-white text-accent hover:bg-white/90 font-bold px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
-            >
-              💬 Fale Conosco no WhatsApp
-            </Button>
+      <section className="relative pt-20 sm:pt-24 min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh]">
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src={encodeURI("/video-produto.mp4")} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 flex items-center justify-center min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh]">
+          <div className="container mx-auto px-4 text-center max-w-3xl">
+            <h1 data-sr="up" data-sr-duration="0.8" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-6">
+              Nossos Produtos
+            </h1>
+            <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed mb-8">
+              Descubra nossa coleção completa de presentes personalizados. Cada produto é criado com carinho e atenção aos detalhes.
+            </p>
+            <div data-sr="up" data-sr-duration="0.7">
+              <Button
+                onClick={handleWhatsApp}
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-primary-hover font-bold px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+              >
+                💬 Fale Conosco no WhatsApp
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -232,7 +253,7 @@ const Products = () => {
       </section>
 
       {/* Products Grid */}
-      <section className="py-16">
+      <section className="py-16" style={{ contentVisibility: 'auto', containIntrinsicSize: '1200px' }}>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {filteredProducts.map((product, index) => (
@@ -245,7 +266,9 @@ const Products = () => {
                   category={product.category}
                   galleryImages={product.galleryImages}
                   disableFlip
+                  shoppeLink={(product as any).shoppeLink}
                 />
+                {/* Removido botão externo para manter CTA dentro do card */}
               </div>
             ))}
           </div>
@@ -274,7 +297,7 @@ const Products = () => {
           <h2 data-sr="up" data-sr-duration="0.8" className="text-2xl sm:text-3xl lg:text-4xl font-bold text-accent mb-6">
              Não encontrou o que procura?
            </h2>
-          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-base sm:text-lg text-foreground mb-8 max-w-2xl mx-auto">
+          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-base sm:text-lg text-black mb-8 max-w-2xl mx-auto">
             Criamos produtos personalizados sob medida! Entre em contato e conte sua ideia.
           </p>
           <div data-sr="up" data-sr-duration="0.7">

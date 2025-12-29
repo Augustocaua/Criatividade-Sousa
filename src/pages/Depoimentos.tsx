@@ -61,6 +61,9 @@ const Depoimentos = () => {
                       src={src}
                       alt={`Depoimento ${index + 1}`}
                       loading="lazy"
+                      decoding="async"
+                      width="900"
+                      height="1200"
                       className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
