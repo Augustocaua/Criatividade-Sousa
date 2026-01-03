@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import LogoFrame from "./LogoFrame";
 
-const Header = () => {
+const Header = ({ stickyInSection = false }: { stickyInSection?: boolean }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`${stickyInSection ? "relative w-full" : "fixed top-0 left-0 right-0"} z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border"
           : "bg-transparent"

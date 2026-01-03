@@ -10,7 +10,7 @@ const BenefitsSection = () => {
     {
       icon: Truck,
       title: "Entrega segura",
-      description: "Produtos prontoscom entrega segura e pontua"
+      description: "Produtos prontos com entrega segura e pontual"
     },
     {
       icon: Heart,
@@ -48,8 +48,15 @@ const BenefitsSection = () => {
               >
                 <div className="relative mb-6">
                   <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-primary to-accent rounded-full shadow-lg group-hover:shadow-xl transform group-hover:scale-110 transition-all duration-300">
-                    <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                    <Icon className={`w-8 h-8 sm:w-10 sm:h-10 text-white ${benefit.icon === Truck ? 'animate-truck-forward' : ''} ${benefit.icon === Heart ? 'animate-heart-beat' : ''}`} />
                   </div>
+                  {benefit.icon === Truck && (
+                    <>
+                      <span className="truck-dust truck-dust-1" aria-hidden="true" />
+                      <span className="truck-dust truck-dust-2" aria-hidden="true" />
+                      <span className="truck-dust truck-dust-3" aria-hidden="true" />
+                    </>
+                  )}
                   {/* Decorative ring */}
                   <div className="absolute inset-0 w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors duration-300" />
                 </div>

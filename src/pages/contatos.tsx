@@ -19,21 +19,24 @@ const Contatos = () => {
 
   return (
     <div className="min-h-screen bg-background animated-bg">
-      <Header />
+      {/* Header fixo apenas na primeira seção */}
       
       <main>
         {/* Hero Section */}
         <section className="bg-white text-foreground py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 data-sr="up" data-sr-duration="0.9" className="text-4xl md:text-6xl font-bold mb-6">
-              Entre em Contato
-            </h1>
-            <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-xl md:text-2xl text-black max-w-3xl mx-auto">
-              Estamos aqui para transformar suas ideias em presentes únicos e inesquecíveis. 
-              Fale conosco e vamos criar algo especial juntos!
-            </p>
+          <div className="sticky top-0 z-50">
+            <Header stickyInSection />
           </div>
-        </section>
+          <div className="container mx-auto px-4 text-center">
+             <h1 data-sr="up" data-sr-duration="0.9" className="text-4xl md:text-6xl font-bold mb-6">
+               Entre em Contato
+             </h1>
+             <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-xl md:text-2xl text-black max-w-3xl mx-auto">
+               Estamos aqui para transformar suas ideias em presentes únicos e inesquecíveis. 
+               Fale conosco e vamos criar algo especial juntos!
+             </p>
+           </div>
+         </section>
 
         {/* Contact Information Section */}
         <section className="py-20 bg-white">

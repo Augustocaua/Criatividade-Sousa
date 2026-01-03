@@ -5,14 +5,17 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 const SobreNos = () => {
   return (
     <div className="min-h-screen bg-background animated-bg">
-      <Header />
+      {/* Header fixo apenas na primeira seção */}
       <WhatsAppFloat />
 
       <section className="pt-24 pb-16 bg-white">
+        <div className="sticky top-0 z-50">
+          <Header stickyInSection />
+        </div>
         <div className="container mx-auto px-4">
-            <h1 data-sr="up" data-sr-duration="0.8" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent mb-6 text-center">
-            🌟 Sobre a Criatividade Sousa
-          </h1>
+             <h1 data-sr="up" data-sr-duration="0.8" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent mb-6 text-center">
+             🌟 Sobre a Criatividade Sousa
+           </h1>
 
           <div className="flex justify-center mb-8">
              <img

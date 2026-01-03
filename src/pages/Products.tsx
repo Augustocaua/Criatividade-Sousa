@@ -72,14 +72,7 @@ const Products = () => {
         encodeURI("/Presente menino criativo infantil/5.jpeg"),
       ]
     },
-    {
-      id: 4,
-      image: mugProduct,
-      title: "Caneca Mágica Personalizada",
-      price: "R$ 45,00",
-      description: "Caneca que muda de cor com líquido quente. Revela sua mensagem ou foto especial.",
-      category: "canecas"
-    },
+
     {
       id: 12,
       image: encodeURI("/Caneca de colorir pinte e lave/1.jpeg"),
@@ -117,14 +110,7 @@ const Products = () => {
       description: "Conjunto de brindes personalizados para eventos e campanhas promocionais.",
       category: "corporativo"
     },
-    {
-      id: 7,
-      image: mugProduct,
-      title: "Caneca Dia das Mães",
-      price: "R$ 40,00",
-      description: "Caneca especial para o Dia das Mães com design exclusivo e mensagem carinhosa.",
-      category: "especiais"
-    },
+
     {
       id: 8,
       image: basketProduct,
@@ -173,6 +159,18 @@ const Products = () => {
         encodeURI("/bola de natal/ima3.jpeg"),
       ]
     },
+    {
+      id: 13,
+      image: encodeURI("/Caneca Motivacional/br-11134207-81z1k-mf8k8pnstngk39-convertido-de-webp.jpeg"),
+      title: "Caneca Motivacional",
+      price: "R$ 38,99",
+      description: "Caneca Motivacional Treino Academia Presente Fitness- Caneca Porcelana-Frases de Academia- Humor Maromba.",
+      category: "canecas",
+      galleryImages: [
+        encodeURI("/Caneca Motivacional/br-11134207-81z1k-mf8k8pnstngk39-convertido-de-webp.jpeg"),
+        encodeURI("/Caneca Motivacional/br-11134207-81z1k-mf8k8pnsv210cb-convertido-de-webp.jpeg"),
+      ]
+    },
   ];
 
   const filteredProducts = selectedCategory === "todos" 
@@ -193,10 +191,13 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-background animated-bg">
-      <Header />
+      {/* Header fixo apenas na primeira seção (Hero) */}
       
       {/* Hero Section */}
       <section className="relative pt-20 sm:pt-24 min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh]">
+      <div className="sticky top-0 z-50">
+      <Header stickyInSection />
+      </div>
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay

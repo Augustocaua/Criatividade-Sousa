@@ -18,8 +18,11 @@ const Footer = React.lazy(() => import("@/components/Footer"));
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Header />
-      <section id="inicio">
+      {/* Removido Header do topo global para permitir sticky apenas na primeira seção */}
+      <section id="inicio" className="relative">
+        <div className="sticky top-0 z-50">
+          <Header stickyInSection />
+        </div>
         <HeroSection />
       </section>
       <section id="produtos">

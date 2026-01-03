@@ -467,3 +467,54 @@ p, a, button, input, textarea, label, span, div {
 [data-sr-progress] {
   will-change: transform, opacity, clip-path;
 }
+
+/* Caminhão parado: falso movimento (avanço sutil + poeira) */
+@keyframes truck-forward-bob {
+  0%   { transform: translateX(0) translateY(0); }
+  30%  { transform: translateX(4px) translateY(-0.5px); }
+  60%  { transform: translateX(6px) translateY(0.5px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+.animate-truck-forward {
+  animation: truck-forward-bob 1600ms ease-in-out infinite;
+}
+
+/* Poeira leve surgindo atrás do caminhão */
+@keyframes truck-dust {
+  0%   { opacity: 0; transform: translateX(0) translateY(0) scale(0.6); }
+  10%  { opacity: 0.4; }
+  100% { opacity: 0; transform: translateX(-16px) translateY(2px) scale(1); }
+}
+
+.truck-dust {
+  position: absolute;
+  width: 6px; height: 6px; border-radius: 9999px;
+  background: rgba(0,0,0,0.15);
+  filter: blur(0.6px);
+  animation: truck-dust 1200ms ease-out infinite;
+  z-index: 0;
+}
+
+.truck-dust-1 { left: 8px; bottom: 10px; animation-delay: 0ms; }
+.truck-dust-2 { left: 6px; bottom: 12px; animation-delay: 180ms; }
+.truck-dust-3 { left: 4px; bottom: 9px;  animation-delay: 360ms; }
+
+/* Coração pulsando (Presentes Memoráveis) */
+@keyframes heart-beat {
+  0%   { transform: scale(1); }
+  20%  { transform: scale(1.12); }
+  40%  { transform: scale(0.98); }
+  60%  { transform: scale(1.10); }
+  80%  { transform: scale(1.00); }
+  100% { transform: scale(1); }
+}
+
+.animate-heart-beat {
+  animation: heart-beat 1200ms ease-in-out infinite;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-truck-forward, .truck-dust, .animate-heart-beat { animation: none; }
+}

@@ -22,27 +22,30 @@ const Depoimentos = () => {
 
   return (
     <div className="min-h-screen bg-background animated-bg">
-      <Header />
+      {/* Header fixo apenas na primeira seção */}
       <WhatsAppFloat />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container mx-auto px-4 text-center">
-          <h1 data-sr="up" data-sr-duration="0.9" className="text-4xl lg:text-6xl font-bold text-accent mb-6">
-            O que nossos{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              clientes
-            </span>{" "}
-            dizem
-          </h1>
-          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-xl text-black max-w-3xl mx-auto mb-8">
-            Clientes satisfeitos compartilham suas experiências com nossos presentes personalizados
-          </p>
-          
-
-
+        <div className="sticky top-0 z-50">
+          <Header stickyInSection />
         </div>
-      </section>
+        <div className="container mx-auto px-4 text-center">
+           <h1 data-sr="up" data-sr-duration="0.9" className="text-4xl lg:text-6xl font-bold text-accent mb-6">
+             O que nossos{" "}
+             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+               clientes
+             </span>{" "}
+             dizem
+           </h1>
+           <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-xl text-black max-w-3xl mx-auto mb-8">
+             Clientes satisfeitos compartilham suas experiências com nossos presentes personalizados
+           </p>
+           
+
+
+         </div>
+       </section>
 
       {/* Depoimentos Grid */}
       <section className="py-16">

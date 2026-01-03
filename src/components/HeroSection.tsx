@@ -19,14 +19,17 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-16 sm:py-20 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Content */}
         <div className="text-center lg:text-left space-y-8">
-          <h1 data-sr="up" data-sr-stagger="words" data-sr-duration="0.9" data-sr-ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)" data-sr-step="0.06" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent">
-            Presentes que{" "}
-            <br className="sm:hidden" />
-            <span className="inline-block whitespace-nowrap align-baseline">
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Marcam
-              </span>{"\u00A0"}Momentos
-            </span>
+          <h1
+            data-sr="up"
+            data-sr-stagger="words"
+            data-sr-duration="0.9"
+            data-sr-ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+            data-sr-step="0.06"
+            className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight leading-tight"
+          >
+            <span className="text-accent">Presentes que</span>{" "}
+            <span className="text-primary">Marcam</span>{" "}
+            <span className="block sm:inline text-accent">Momentos Inesquecíveis</span>
           </h1>
           
           <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)" data-sr-step="0.08" className="text-base sm:text-lg lg:text-2xl text-black max-w-2xl leading-relaxed">
@@ -66,13 +69,24 @@ const HeroSection = () => {
               data-sr="up" data-sr-duration="0.8"
               className="w-[180px] sm:w-[220px] md:w-[256px] lg:w-[384px] xl:w-[512px] h-auto rounded-3xl shadow-2xl"
             />
+            {/* Neon overlay */}
+            <div
+              className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-[#d4af37]/40 shadow-[0_0_18px_rgba(212,175,55,0.5)] motion-safe:animate-pulse"
+              aria-hidden="true"
+            />
             {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full font-bold shadow-lg" data-sr="fade" data-sr-duration="0.8">
+            <div
+              className="absolute -top-4 -right-4 bg-gradient-to-r from-[#d4af37] to-[#bfa14a] text-black px-4 py-2 rounded-full font-bold shadow-lg shadow-[0_0_14px_rgba(212,175,55,0.7)] animate-bounce"
+              data-sr="fade" data-sr-duration="0.8"
+            >
                🎁 Personalizado
-             </div>
-            <div className="absolute -bottom-4 -left-4 bg-primary text-primary-foreground px-4 py-2 rounded-full font-bold shadow-lg" data-sr="fade" data-sr-duration="0.8">
-               ❤️ Com Amor
-             </div>
+            </div>
+            <div
+              className="absolute -bottom-4 -left-4 bg-pink-500 text-white px-4 py-2 rounded-full font-bold shadow-lg shadow-[0_0_14px_rgba(255,20,147,0.6)] motion-safe:animate-pulse"
+              data-sr="fade" data-sr-duration="0.8"
+            >
+              ❤️
+            </div>
           </div>
         </div>
       </div>
