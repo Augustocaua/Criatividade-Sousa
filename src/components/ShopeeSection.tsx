@@ -2,12 +2,11 @@ const ShopeeSection = () => {
   return (
     <section
       id="shopee"
-      className="relative py-20 sm:py-24 min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] overflow-hidden"
+      className="relative py-16 sm:py-20 lg:py-24 min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] overflow-hidden"
     >
       <video
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain md:object-cover"
         autoPlay
-        loop
         muted
         playsInline
         preload="metadata"
