@@ -1,3 +1,5 @@
+import { openSafeWindow } from "@/lib/utils";
+
 const TestimonialsSection = () => {
   const galleryImages = [
     "/depoimentos/depoimento-1.jpeg",
@@ -11,7 +13,7 @@ const TestimonialsSection = () => {
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Olá! Vi os depoimentos e gostaria de fazer um pedido personalizado 🎁");
-    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
+    openSafeWindow(`https://wa.me/5571987929082?text=${message}`);
   };
 
   return (

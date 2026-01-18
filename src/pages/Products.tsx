@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { useSearchParams } from "react-router-dom";
+import { openSafeWindow } from "@/lib/utils";
 
 // Importar imagens dos produtos
 import mugProduct from "@/assets/mug-product.jpg";
@@ -104,20 +105,28 @@ const Products = () => {
     },
     {
       id: 6,
-      image: corporateKit,
-      title: "Kit Brindes Promocionais",
-      price: "R$ 85,00",
-      description: "Conjunto de brindes personalizados para eventos e campanhas promocionais.",
-      category: "corporativo"
+      image: encodeURI("/Topo de bolo Carnaval tropical/foto1.jpeg"),
+      title: "Topo de bolo Carnaval tropical",
+      price: "R$23,82",
+      description: "chique/Decoração carnaval elegante/Topo diferenciado/Pronto para usar 🎭🌴 ",
+      category: "topos-de-bolos",
+      galleryImages: [
+        encodeURI("/Topo de bolo Carnaval tropical/foto1.jpeg"),
+        encodeURI("/Topo de bolo Carnaval tropical/foto2.jpeg"),
+      ]
     },
 
     {
       id: 8,
-      image: basketProduct,
-      title: "Cesta Aniversário Luxo",
-      price: "R$ 150,00",
-      description: "Cesta premium com champagne, chocolates gourmet e itens de luxo para aniversários.",
-      category: "especiais"
+      image: encodeURI("/Flores Paraíso/1.jpeg"),
+      title: "Flores Paraíso",
+      price: "R$27,99",
+      description: "Flores Paraíso para topo de bolo/Decoração sofisticada/Kit com 4 flores/Criação exclusiva Criatividade Sousa 🌸✨",
+      category: "topos-de-bolos",
+      galleryImages: [
+        encodeURI("/Flores Paraíso/1.jpeg"),
+        encodeURI("/Flores Paraíso/2.jpeg"),
+      ]
     },
     {
       id: 9,
@@ -179,14 +188,14 @@ const Products = () => {
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Olá! Gostaria de ver o catálogo completo de produtos 🎁");
-    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
+    openSafeWindow(`https://wa.me/5571987929082?text=${message}`);
   };
 
   const handleBuyNow = (product: { title: string; price?: string }) => {
     const message = encodeURIComponent(
       `Olá! Quero comprar ${product.title}${product.price ? ` (${product.price})` : ''}. Pode me ajudar?`
     );
-    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
+    openSafeWindow(`https://wa.me/5571987929082?text=${message}`);
   };
 
   return (
@@ -194,7 +203,7 @@ const Products = () => {
       {/* Header fixo apenas na primeira seção (Hero) */}
       
       {/* Hero Section */}
-      <section className="relative pt-20 sm:pt-24 min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh]">
+      <section className="relative pt-20 sm:pt-24 md:pt-16 min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh]">
       <div className="sticky top-0 z-50">
       <Header stickyInSection />
       </div>

@@ -2,11 +2,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Button } from "@/components/ui/button";
+import { openSafeWindow } from "@/lib/utils";
 
 const Depoimentos = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Olá! Vi os depoimentos e gostaria de fazer um pedido personalizado 🎁");
-    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
+    openSafeWindow(`https://wa.me/5571987929082?text=${message}`);
   };
 
   const galleryImages = [
@@ -26,7 +27,7 @@ const Depoimentos = () => {
       <WhatsAppFloat />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section className="pt-24 md:pt-16 pb-16 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="sticky top-0 z-50">
           <Header stickyInSection />
         </div>

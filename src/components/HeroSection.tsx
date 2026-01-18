@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { openSafeWindow } from "@/lib/utils";
 
 const HeroSection = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Olá! Gostaria de fazer um pedido personalizado 🎁");
-    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
+    openSafeWindow(`https://wa.me/5571987929082?text=${message}`);
   };
 
   return (

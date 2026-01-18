@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { openSafeWindow } from "@/lib/utils";
 
 interface ProductCardProps {
   image: string;
@@ -39,7 +40,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
     const message = encodeURIComponent(
       `Olá! Quero comprar ${title}${price ? ` (${price})` : ''}. Pode me ajudar?`
     );
-    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
+    openSafeWindow(`https://wa.me/5571987929082?text=${message}`);
   };
 
   // Ao clicar, exibir opções (WhatsApp e Shopee) quando houver shoppeLink
@@ -146,7 +147,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                 aria-controls="buy-options"
                 className="w-full bg-primary text-primary-foreground hover:bg-primary-hover font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
-                {showBuyOptions ? "Fechar opções" : "🛒 Compre agora"}
+                {showBuyOptions ? "Fechar opções" : "Ver Produto"}
               </Button>
               <div
                 id="buy-options"
@@ -175,7 +176,7 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
               onClick={buyNow}
               className="w-full bg-primary text-primary-foreground hover:bg-primary-hover font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
-              🛒 Compre agora
+              Ver Produto
             </Button>
           )}
         </div>

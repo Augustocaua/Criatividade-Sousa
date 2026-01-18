@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import LogoFrame from "./LogoFrame";
+import { openSafeWindow } from "@/lib/utils";
 
 const Header = ({ stickyInSection = false }: { stickyInSection?: boolean }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +31,7 @@ const Header = ({ stickyInSection = false }: { stickyInSection?: boolean }) => {
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Olá! Gostaria de fazer um pedido personalizado 🎁");
-    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
+    openSafeWindow(`https://wa.me/5571987929082?text=${message}`);
   };
 
   return (
@@ -42,7 +43,6 @@ const Header = ({ stickyInSection = false }: { stickyInSection?: boolean }) => {
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
         <div className="flex items-center space-x-3">
           <LogoFrame width={120} height={60} className="h-12" />
 
@@ -51,7 +51,6 @@ const Header = ({ stickyInSection = false }: { stickyInSection?: boolean }) => {
           </span>
         </div>
 
-        {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-8">
           {menuItems.map((item, index) => (
             item.isRoute ? (
@@ -82,8 +81,6 @@ const Header = ({ stickyInSection = false }: { stickyInSection?: boolean }) => {
           ))}
         </nav>
 
-
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
