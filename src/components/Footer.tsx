@@ -1,11 +1,10 @@
 import { Instagram, Facebook, MapPin, Phone, Mail, ShoppingBag } from "lucide-react";
 import logo from "@/assets/criatividade-sousa-logo-novo.svg";
-import { openSafeWindow } from "@/lib/utils";
 
 const Footer = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Olá! Gostaria de mais informações 🎁");
-    openSafeWindow(`https://wa.me/5571987929082?text=${message}`);
+    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
   };
 
   const quickLinks = [

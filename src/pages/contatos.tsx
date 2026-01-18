@@ -3,19 +3,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Button } from "@/components/ui/button";
-import { openSafeWindow } from "@/lib/utils";
 
 const Contatos = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Olá! Gostaria de fazer um pedido personalizado 🎁");
-    openSafeWindow(`https://wa.me/5571987929082?text=${message}`);
+    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
   };
 
   const handleInstagram = () => {
-    openSafeWindow("https://instagram.com/criatividadesousa");
+    window.open("https://instagram.com/criatividadesousa", "_blank");
   };
   const handleShopee = () => {
-    openSafeWindow("https://shopee.com.br/criatividadesousa#product_list");
+    window.open("https://shopee.com.br/criatividadesousa#product_list", "_blank");
   };
 
   return (
@@ -24,7 +23,7 @@ const Contatos = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="bg-white text-foreground pt-24 md:pt-16 pb-20">
+        <section className="relative bg-white text-foreground pt-24 pb-16">
           <div className="sticky top-0 z-50">
             <Header stickyInSection />
           </div>

@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { openSafeWindow } from "@/lib/utils";
 
 const CTASection = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Olá! Quero transformar carinho em um presente inesquecível 💝");
-    openSafeWindow(`https://wa.me/5571987929082?text=${message}`);
+    window.open(`https://wa.me/5571987929082?text=${message}`, "_blank");
   };
 
   return (

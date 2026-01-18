@@ -8,7 +8,7 @@ const SobreNos = () => {
       {/* Header fixo apenas na primeira seção */}
       <WhatsAppFloat />
 
-      <section className="pt-24 md:pt-16 pb-16 bg-white">
+      <section className="relative pt-24 pb-16 bg-white">
         <div className="sticky top-0 z-50">
           <Header stickyInSection />
         </div>
