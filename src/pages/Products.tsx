@@ -218,15 +218,7 @@ const Products = () => {
             <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed mb-8">
               Descubra nossa coleção completa de presentes personalizados. Cada produto é criado com carinho e atenção aos detalhes.
             </p>
-            <div data-sr="up" data-sr-duration="0.7">
-              <Button
-                onClick={handleWhatsApp}
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary-hover font-bold px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
-              >
-                💬 Fale Conosco no WhatsApp
-              </Button>
-            </div>
+
           </div>
         </div>
       </section>

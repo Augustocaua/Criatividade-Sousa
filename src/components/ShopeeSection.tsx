@@ -1,77 +1,70 @@
+
 const ShopeeSection = () => {
   return (
-    <section
-      id="shopee"
-      className="relative py-16 sm:py-20 lg:py-24 min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] overflow-hidden"
-    >
-      <video
-        className="absolute inset-0 w-full h-full object-contain md:object-cover"
-        autoPlay
-        muted
-        playsInline
-        preload="metadata"
-        aria-hidden="true"
-      >
-        <source src={encodeURI("/video seção shopee.mp4")} type="video/mp4" />
-      </video>
-      <div className="absolute inset-0 bg-black/50" />
-
-      <div className="relative z-10 flex items-center justify-center min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <div>
-              <h2
-                data-sr="up"
-                data-sr-duration="0.8"
-                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4"
-              >
-                Destaques da Shopee
-              </h2>
-              <p
-                data-sr="fade"
-                data-sr-stagger="words"
-                data-sr-duration="0.8"
-                data-sr-step="0.06"
-                className="text-base sm:text-lg text-white/90"
-              >
-                Confira alguns produtos em destaque na nossa loja da Shopee
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h3
-                data-sr="up"
-                data-sr-duration="0.8"
-                className="text-2xl sm:text-3xl font-bold text-white"
-              >
-                Loja Shopee Criatividade Sousa
-              </h3>
-              <p
-                data-sr="fade"
-                data-sr-stagger="words"
-                data-sr-duration="0.8"
-                data-sr-step="0.06"
-                className="text-base sm:text-lg text-white/90 leading-relaxed"
-              >
-                Acompanhe nossa loja da Shopee. Descubra produtos criativos e
-                exclusivos na Criatividade Sousa. Sempre novidades, qualidade
-                garantida e ofertas especiais.
-              </p>
-            </div>
-
-            <div
+    <section id="shopee" className="py-16 sm:py-24 bg-white relative overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
+          
+          {/* Top Title & Subtitle */}
+          <div className="space-y-4 mb-10 sm:mb-16">
+            <h2
               data-sr="up"
-              data-sr-duration="0.7"
-              className="pt-4 flex justify-center"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black"
             >
+              Destaques da Shopee
+            </h2>
+            <p
+              data-sr="fade"
+              className="text-lg sm:text-xl text-black max-w-2xl mx-auto"
+            >
+              Confira alguns produtos em destaque na nossa loja da Shopee
+            </p>
+          </div>
+
+          {/* Immersive Video Container */}
+          <div
+            data-sr="fade"
+            className="relative w-[95%] md:w-[80%] mb-12 sm:mb-16"
+          >
+            <video
+              className="w-full h-auto object-cover"
+              autoPlay
+              muted
+              playsInline
+              preload="metadata"
+              aria-hidden="true"
+            >
+              <source src={encodeURI("/video seção shopee.mp4")} type="video/mp4" />
+            </video>
+          </div>
+
+          {/* Bottom Content */}
+          <div className="space-y-6 max-w-3xl mx-auto">
+            <h3
+              data-sr="up"
+              className="text-2xl sm:text-3xl font-bold !text-[#D4AA6E]"
+            >
+              Loja Shopee Criatividade Sousa
+            </h3>
+            <p
+              data-sr="fade"
+              className="text-lg text-black max-w-2xl mx-auto leading-relaxed"
+            >
+              Acompanhe nossa loja da Shopee. Descubra produtos criativos e
+              exclusivos na Criatividade Sousa. Sempre novidades, qualidade
+              garantida e ofertas especiais.
+            </p>
+
+            <div data-sr="up" className="pt-6">
               <a
                 href="#"
-                className="inline-flex items-center justify-center bg-[#EE4D2D] hover:bg-[#d54124] text-white px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-transform duration-300 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center bg-[#EE4D2D] hover:bg-[#d54124] text-white px-10 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-lg"
               >
                 Visitar Loja
               </a>
             </div>
           </div>
+          
         </div>
       </div>
     </section>

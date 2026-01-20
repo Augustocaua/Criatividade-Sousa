@@ -41,10 +41,7 @@ const CTASection = () => {
               🎁 Faça seu Pedido Agora
             </Button>
             
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <div className="w-2 h-2 bg-primary rounded-full" />
-              <span className="font-medium">Online agora</span>
-            </div>
+
           </div>
 
           {/* Trust indicators */}
