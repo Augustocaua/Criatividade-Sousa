@@ -26,7 +26,7 @@ const Depoimentos = () => {
       <WhatsAppFloat />
       
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section className="relative pb-16 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="sticky top-0 z-50">
           <Header stickyInSection />
         </div>

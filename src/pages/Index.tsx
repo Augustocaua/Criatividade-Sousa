@@ -19,11 +19,23 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Removido Header do topo global para permitir sticky apenas na primeira seção */}
-      <section id="inicio" className="relative">
-        <div className="sticky top-0 z-50">
-          <Header stickyInSection />
+      <section
+        id="inicio"
+        className="relative min-h-screen w-full overflow-hidden"
+        style={{
+          backgroundImage: 'url("/principal.jpeg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60 z-10" />
+        <div className="relative z-20">
+          <div className="sticky top-0 z-50">
+            <Header stickyInSection />
+          </div>
+          <HeroSection />
         </div>
-        <HeroSection />
       </section>
       <section id="produtos">
         <Suspense fallback={<div className="py-16 text-center text-muted-foreground">Carregando produtos...</div>}>

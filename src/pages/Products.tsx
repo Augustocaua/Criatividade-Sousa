@@ -194,7 +194,7 @@ const Products = () => {
       {/* Header fixo apenas na primeira seção (Hero) */}
       
       {/* Hero Section */}
-      <section className="relative pt-20 sm:pt-24 min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh]">
+      <section className="relative min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh]">
       <div className="sticky top-0 z-50">
       <Header stickyInSection />
       </div>

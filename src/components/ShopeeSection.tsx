@@ -30,10 +30,12 @@ const ShopeeSection = () => {
               className="w-full h-auto object-cover"
               autoPlay
               muted
+              loop
               playsInline
               preload="metadata"
               aria-hidden="true"
             >
+              <source src="/video-secao-shopee.mp4" type="video/mp4" />
               <source src={encodeURI("/video seção shopee.mp4")} type="video/mp4" />
             </video>
           </div>

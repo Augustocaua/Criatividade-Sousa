@@ -7,94 +7,54 @@ const HeroSection = () => {
   };
 
   return (
-    <section
-      id="inicio"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background"
-    >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,hsl(var(--primary)),transparent)]" />
-      </div>
-
-      <div className="container mx-auto px-4 py-16 sm:py-20 grid lg:grid-cols-2 gap-12 items-center relative z-10">
-        {/* Left Content */}
-        <div className="text-center lg:text-left space-y-8">
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
+      <div className="relative container mx-auto px-4 flex flex-col items-center justify-center text-center h-full">
+        <div className="max-w-4xl space-y-8 animate-fade-in">
           <h1
             data-sr="up"
-            data-sr-stagger="words"
-            data-sr-duration="0.9"
-            data-sr-ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)"
-            data-sr-step="0.06"
-            className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight leading-tight"
+            data-sr-duration="1.0"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight drop-shadow-lg"
           >
-            <span className="text-accent">Presentes que</span>{" "}
-            <span className="text-primary">Marcam</span>{" "}
-            <span className="block sm:inline text-accent">Momentos Inesquecíveis</span>
+            Presentes que Marcam
+            <span className="block text-primary-foreground mt-2">Momentos Inesquecíveis</span>
           </h1>
-          
-          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-ease="cubic-bezier(0.25, 0.46, 0.45, 0.94)" data-sr-step="0.08" className="text-base sm:text-lg lg:text-2xl text-black max-w-2xl leading-relaxed">
-             Presentes Personalizadas para todas as ocasiões especiais da sua vida
+          <p
+            data-sr="up"
+            data-sr-delay="0.2"
+            data-sr-duration="1.0"
+            className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto font-medium drop-shadow-md"
+          >
+            Presentes personalizados para todas as ocasiões especiais da sua vida
           </p>
-
-          <div data-sr="up" data-sr-duration="0.7" className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div
+            data-sr="up"
+            data-sr-delay="0.4"
+            data-sr-duration="1.0"
+            className="flex flex-col items-center gap-6 mt-8"
+          >
             <Button
               onClick={handleWhatsApp}
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary-hover font-bold px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+              className="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-6 text-lg sm:text-xl rounded-full shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] transform hover:scale-105 transition-all duration-300 w-full sm:w-auto min-w-[300px]"
             >
               🎁 Faça seu Pedido no WhatsApp
             </Button>
-          </div>
-
-          {/* Features */}
-          <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
-            {["🎨 Design Exclusivo", "💝 Presentes Únicos"].map((feature, index) => (
-              <div
-                key={feature}
-                data-sr="up" data-sr-duration="0.7" data-sr-delay={index * 0.06}
-                className="bg-card border border-border px-3 py-2 rounded-full text-black font-medium text-sm sm:text-base shadow-sm"
-              >
-                {feature}
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-white font-semibold text-base sm:text-lg">
+              <div className="flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+                <span>🎨</span>
+                <span>Design Exclusivo</span>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Right Image */}
-        <div className="flex justify-center">
-          <div className="relative">
-            <img
-              src="/principal.jpeg"
-              alt="Imagem principal do herói"
-              data-sr="up" data-sr-duration="0.8"
-              className="w-[180px] sm:w-[220px] md:w-[256px] lg:w-[384px] xl:w-[512px] h-auto rounded-3xl shadow-2xl"
-            />
-            {/* Neon overlay */}
-            <div
-              className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-[#d4af37]/40 shadow-[0_0_18px_rgba(212,175,55,0.5)] motion-safe:animate-pulse"
-              aria-hidden="true"
-            />
-            {/* Floating elements */}
-            <div
-              className="absolute -top-4 -right-4 bg-gradient-to-r from-[#d4af37] to-[#bfa14a] text-black px-4 py-2 rounded-full font-bold shadow-lg shadow-[0_0_14px_rgba(212,175,55,0.7)] animate-bounce"
-              data-sr="fade" data-sr-duration="0.8"
-            >
-               🎁 Personalizado
-            </div>
-            <div
-              className="absolute -bottom-4 -left-4 bg-pink-500 text-white px-4 py-2 rounded-full font-bold shadow-lg shadow-[0_0_14px_rgba(255,20,147,0.6)] motion-safe:animate-pulse"
-              data-sr="fade" data-sr-duration="0.8"
-            >
-              ❤️
+              <div className="flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+                <span>💝</span>
+                <span>Presentes Únicos</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="w-6 h-10 border-2 border-muted rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-muted-foreground rounded-full mt-2" />
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce hidden sm:block">
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+          <div className="w-1 h-2 bg-white rounded-full mt-2" />
         </div>
       </div>
     </section>

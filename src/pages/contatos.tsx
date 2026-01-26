@@ -23,7 +23,7 @@ const Contatos = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative bg-white text-foreground pt-24 pb-16">
+        <section className="relative bg-white text-foreground pb-16">
           <div className="sticky top-0 z-50">
             <Header stickyInSection />
           </div>
