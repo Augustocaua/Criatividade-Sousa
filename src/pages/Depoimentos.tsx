@@ -78,12 +78,12 @@ const Depoimentos = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-br from-secondary to-muted">
+      <section className="py-16 bg-gradient-to-br from-secondary/20 to-muted/20">
         <div className="container mx-auto px-4 text-center">
           <h2 data-sr="up" data-sr-duration="0.8" className="text-3xl lg:text-4xl font-bold text-accent mb-6">
             Quer ser o próximo cliente satisfeito?
           </h2>
-          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p data-sr="fade" data-sr-stagger="words" data-sr-duration="0.8" data-sr-step="0.06" className="text-xl text-black mb-8 max-w-2xl mx-auto">
             Junte-se a centenas de pessoas que já transformaram <span className="whitespace-nowrap">momentos especiais</span> em lembranças inesquecíveis
           </p>
           
