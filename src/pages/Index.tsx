@@ -22,14 +22,21 @@ const Index = () => {
       <section
         id="inicio"
         className="relative min-h-screen w-full overflow-hidden"
-        style={{
-          backgroundImage: 'url("/principal.jpeg")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
       >
+        {/* Vídeo de Background */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/videoinicio.pagina2.mp4" type="video/mp4" />
+        </video>
+
+        {/* Overlay escuro para melhorar legibilidade */}
         <div className="absolute inset-0 bg-black/60 z-10" />
+
         <div className="relative z-20">
           <div className="sticky top-0 z-50">
             <Header stickyInSection />

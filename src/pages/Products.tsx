@@ -93,7 +93,7 @@ const Products = () => {
       image: "/adesivos-personalizados-em-vinil/1.jpeg",
       title: "Adesivos personalizados em Vinil",
       price: "R$ 65,00",
-      description: "Adesivos personalizados em vinil de alta qualidade, perfeitos para decorar cadernos, laptops, agendas, embalagens ou qualquer superfície lisa. Duráveis, resistentes à água e com cores vibrantes que dão um toque único e criativo aos seus objetos. Personalize do seu jeito e cri...",
+      description: "Adesivos personalizados em vinil de alta qualidade, perfeitos para decorar cadernos, laptops, agendas, embalagens ou qualquer superfície lisa. Duráveis, resistentes à água e com cores vibrantes que dão um toque único.",
       category: "especiais",
       categoryLabel: "Adesivos personalizados em Vinil",
       galleryImages: [

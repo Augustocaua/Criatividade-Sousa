@@ -60,7 +60,7 @@ const ShopeeSection = () => {
             <div data-sr="up" className="pt-6">
               <a
                 href="#"
-                className="inline-flex items-center justify-center bg-[#EE4D2D] hover:bg-[#d54124] text-white px-10 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-lg"
+                className="text-lg font-bold text-[#EE4D2D] hover:underline hover:text-[#d54124] transition-all duration-300"
               >
                 Visitar Loja
               </a>
