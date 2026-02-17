@@ -30,7 +30,6 @@ const ShopeeSection = () => {
               className="w-full h-auto object-cover"
               autoPlay
               muted
-              loop
               playsInline
               preload="metadata"
               aria-hidden="true"
@@ -59,7 +58,9 @@ const ShopeeSection = () => {
 
             <div data-sr="up" className="pt-6">
               <a
-                href="#"
+                href="https://shopee.com.br/criatividadesousa"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-lg font-bold text-[#EE4D2D] hover:underline hover:text-[#d54124] transition-all duration-300"
               >
                 Visitar Loja

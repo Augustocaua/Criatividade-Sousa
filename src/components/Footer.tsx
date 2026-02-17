@@ -1,4 +1,4 @@
-import { Instagram, Facebook, MapPin, Phone, Mail, ShoppingBag } from "lucide-react";
+import { Instagram, MapPin, Phone, Mail, ShoppingBag } from "lucide-react";
 import logo from "@/assets/criatividade-sousa-logo-novo.svg";
 
 const Footer = () => {
@@ -49,19 +49,10 @@ const Footer = () => {
                 className="bg-pink-500 hover:bg-pink-600 p-3 rounded-full transition-colors duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
-                data-sr="up" data-sr-duration="0.7"
+                data-sr="up"
+                data-sr-duration="0.7"
               >
                 <Instagram className="w-6 h-6 text-white" />
-              </a>
-              
-              <a
-                href="https://facebook.com/criatividadesousa"
-                className="bg-blue-500 hover:bg-blue-600 p-3 rounded-full transition-colors duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-sr="up" data-sr-duration="0.7"
-              >
-                <Facebook className="w-6 h-6 text-white" />
               </a>
               <a
                 href="https://shopee.com.br/criatividadesousa#product_list"

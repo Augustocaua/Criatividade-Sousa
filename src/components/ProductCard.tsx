@@ -132,7 +132,9 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
           </div>
         </div>
         <div className="p-4 space-y-3">
-          <h3 className="text-base sm:text-lg font-bold text-accent">{title}</h3>
+          <h3 className="text-base sm:text-lg font-bold text-black">
+            {title}
+          </h3>
           <p className="text-sm sm:text-base text-black">{description}</p>
           <div className="flex flex-col items-center gap-3">
             <span className="text-lg sm:text-xl font-bold text-accent">{price}</span>
@@ -231,8 +233,8 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
                 {categoryLabel ?? category}
               </span>
             </div>
-            <div className="p-4 h-1/4 flex items-center justify-center">
-              <h3 className="text-base sm:text-lg font-bold text-accent text-center">
+          <div className="p-4 h-1/4 flex items-center justify-center">
+              <h3 className="text-base sm:text-lg font-bold text-black text-center">
                 {title}
               </h3>
             </div>
@@ -242,7 +244,9 @@ const ProductCard = ({ image, title, price, description, category, galleryImages
         {/* Back */}
         <div className="flip-card-back bg-gradient-to-br from-primary to-accent p-6 flex">
           <div className="flex flex-col items-center justify-center text-center gap-4 w-full">
-            <h3 className="text-lg sm:text-2xl font-bold text-accent-foreground">{title}</h3>
+            <h3 className="text-3xl font-bold text-accent-foreground">
+              {["Canecas Personalizadas", "Etiquetas Escolares", "Combos Personalizados", "Topos de Bolos"].includes(title) ? <span className="text-white">{title}</span> : title}
+            </h3>
             <p className="text-sm sm:text-base text-black max-w-prose">{description}</p>
             <span className="text-3xl font-bold text-accent-foreground">{price}</span>
             <Link

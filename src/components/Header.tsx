@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import LogoFrame from "./LogoFrame";
 
 const Header = ({ stickyInSection = false }: { stickyInSection?: boolean }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +16,7 @@ const Header = ({ stickyInSection = false }: { stickyInSection?: boolean }) => {
   }, []);
 
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  const isHomePage = location.pathname === "/";
 
   const menuItems = [
     { name: "Início", href: "#inicio", isRoute: false },
@@ -42,12 +41,9 @@ const Header = ({ stickyInSection = false }: { stickyInSection?: boolean }) => {
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center space-x-3">
-          <LogoFrame width={120} height={60} className="h-12" />
-
-          <span data-sr="fade" data-sr-duration="0.8" className={"text-accent text-2xl font-bold"}>
-            Criatividade Sousa
+        <div className="flex items-center space-x-3 flex-1 md:flex-none justify-center md:justify-start">
+          <span className="text-white text-xl sm:text-2xl font-extrabold tracking-[0.18em]">
+            CRIATIVIDADE SOUSA
           </span>
         </div>
 
@@ -85,7 +81,7 @@ const Header = ({ stickyInSection = false }: { stickyInSection?: boolean }) => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2"
+          className="md:hidden p-2 ml-auto"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (

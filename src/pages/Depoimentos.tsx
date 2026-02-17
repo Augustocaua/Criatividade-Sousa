@@ -31,9 +31,9 @@ const Depoimentos = () => {
           <Header stickyInSection />
         </div>
         <div className="container mx-auto px-4 text-center">
-           <h1 data-sr="up" data-sr-duration="0.9" className="text-4xl lg:text-6xl font-bold text-accent mb-6">
+          <h1 data-sr="up" data-sr-duration="0.9" className="text-4xl lg:text-6xl font-bold text-accent mb-6">
              O que nossos{" "}
-             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-bold">
                clientes
              </span>{" "}
              dizem

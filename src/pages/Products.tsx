@@ -51,11 +51,18 @@ const Products = () => {
     },
     {
       id: 2,
-      image: basketProduct,
-      title: "Cesta Romântica Especial",
-      price: "R$ 89,00",
-      description: "Cesta completa com chocolates, vinho e itens românticos. Perfeita para datas especiais.",
-      category: "cestas"
+      image: "/Etiquetas escolares/adesivo 1.jpeg",
+      title: "kit 100 unidades de Etiquetas escolares",
+      price: "R$ 32,90",
+      description: "kit 100 unidades de Etiquetas escolares personalizadas com foto/Material escolar elegante/Adesivo prova d´água",
+      category: "especiais",
+      categoryLabel: "Etiquetas escolares",
+      galleryImages: [
+        encodeURI("/Etiquetas escolares/adesivo 1.jpeg"),
+        encodeURI("/Etiquetas escolares/adesivo 2.jpeg"),
+        encodeURI("/Etiquetas escolares/adesivo 3.jpeg"),
+        encodeURI("/Etiquetas escolares/adesivo 4.jpeg"),
+      ]
     },
     {
       id: 3,
@@ -113,11 +120,18 @@ const Products = () => {
 
     {
       id: 8,
-      image: basketProduct,
-      title: "Cesta Aniversário Luxo",
-      price: "R$ 150,00",
-      description: "Cesta premium com champagne, chocolates gourmet e itens de luxo para aniversários.",
-      category: "especiais"
+      image: "/tete-convertido-de-jpeg.jpeg",
+      title: "Topo de bolo Amo tetê",
+      price: "R$ 23,45",
+      description: "topo de bolo amo tetê – topper cake circular – enfeite para bolo personalizado – decoração criativa",
+      category: "topos-de-bolos",
+      categoryLabel: "Topos de bolos",
+      galleryImages: [
+        encodeURI("/topo de bolo tete/1.jpeg"),
+        encodeURI("/topo de bolo tete/2.jpeg"),
+        encodeURI("/topo de bolo tete/3.jpeg"),
+        encodeURI("/topo de bolo tete/4.jpeg"),
+      ]
     },
     {
       id: 9,
@@ -207,7 +221,7 @@ const Products = () => {
           preload="metadata"
           aria-hidden="true"
         >
-          <source src={encodeURI("/video-produto.mp4")} type="video/mp4" />
+          <source src={encodeURI("/pt2produtos video.mp4")} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 flex items-center justify-center min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh]">

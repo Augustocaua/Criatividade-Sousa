@@ -16,13 +16,17 @@ const CTASection = () => {
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h2 data-sr="up" data-sr-duration="0.8" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-accent mb-6">
-            Transformamos{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h2 data-sr="up" data-sr-duration="0.8" className="text-3xl sm:text-4xl lg:text-6xl text-accent mb-6">
+            <span className="font-normal">
+              Transformamos{" "}
+            </span>
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-normal">
               carinho
-            </span>{" "}
-            em presentes{" "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            </span>
+            <span className="font-normal">
+              {" "}em presentes{" "}
+            </span>
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-normal">
               inesquecíveis
             </span>
           </h2>
