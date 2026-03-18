@@ -9,7 +9,6 @@ import Depoimentos from "./pages/Depoimentos";
 import Contatos from "./pages/contatos";
 import NotFound from "./pages/NotFound";
 import SobreNos from "./pages/SobreNos";
-import PoliticaPrivacidade from "./pages/politica-de-privacidade";
 import { useEffect } from "react";
 import { initScrollReveal } from "@/lib/scrollReveal";
 
@@ -36,7 +35,6 @@ const App = () => (
           <Route path="/depoimentos" element={<Depoimentos />} />
           <Route path="/contatos" element={<Contatos />} />
           <Route path="/sobre-nos" element={<SobreNos />} />
-          <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

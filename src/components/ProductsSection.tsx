@@ -30,7 +30,7 @@ const ProductsSection = () => {
       categoryLabel: "combos"
     },
     {
-      image: "/tete-convertido-de-jpeg.jpeg",
+      image: encodeURI("/foto tete.jpeg"),
       title: "Topos de Bolos",
       price: "A partir de R$ 45",
       description: "Ideias originais e criativas para surpreender pessoas especiais",

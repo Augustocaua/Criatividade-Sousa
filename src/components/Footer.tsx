@@ -30,6 +30,11 @@ const Footer = () => {
               Há mais de 5 anos criando presentes únicos e personalizados que marcam <span className="whitespace-nowrap">momentos especiais</span>.
               Transformamos suas ideias em realidade com carinho e dedicação.
             </p>
+
+            <p className="text-black mb-6 leading-relaxed max-w-md" data-sr="fade" data-sr-duration="0.8">
+              Privacidade: usamos seus dados apenas para atendimento e resposta de mensagens. Não armazenamos, vendemos ou compartilhamos dados pessoais com terceiros, em conformidade com a LGPD. Dúvidas:{" "}
+              <a href="mailto:contato@criatividadesousa.com.br">contato@criatividadesousa.com.br</a>
+            </p>
             
             <div className="flex space-x-4">
               <a
